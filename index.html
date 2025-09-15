@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crown Chemist | Fantasy Hair Design & Color Theory</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+```
+    :root {
+        --pure-black: #000000;
+        --matte-black: #1C1C1C;
+        --soft-black: #0A0A0A;
+        --pure-white: #FFFFFF;
+        --off-white: #F8F8F8;
+        --vibrant-purple: #8A2BE2;
+        --vibrant-purple-light: #9932CC;
+        --vibrant-purple-dark: #6A1B9A;
+        --vibrant-purple-neon: #B347D9;
+    }
+
+    body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        color: var(--pure-white);
+        background: var(--pure-black);
+        min-height: 100vh;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+        background: rgba(0, 0, 0, 0.98);
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        backdrop-filter: blur(20px);
+        border-bottom: 2px solid var(--vibrant-purple);
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 2rem;
+        font-weight: bold;
+        color: var(--pure-white);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+    }
+
+    .logo::after {
+        content: "💎";
+        margin-left: 12px;
+        color: var(--vibrant-purple);
+        filter: drop-shadow(0 0 10px rgba(138, 43, 226, 0.8));
+    }
+
+    .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 2.5rem;
+        align-items: center;
+    }
+
+    .nav-links a {
+        color: var(--pure-white);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        border-bottom: 2px solid transparent;
+        padding: 5px 0;
+        cursor: pointer;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+        color: var(--vibrant-purple-neon);
+        border-bottom-color: var(--pure-white);
+        text-shadow: 0 0 15px rgba(179, 71, 217, 0.6);
+    }
+
+    .book-btn-nav {
+        background: var(--vibrant-purple);
+        color: var(--pure-white) !important;
+        padding: 10px 20px;
+        border: 2px solid var(--vibrant-purple);
+        border-bottom: 2px solid var(--vibrant-purple) !important;
+        transition: all 0.3s ease;
+    }
+
+    .book-btn-nav:hover {
+        background: var(--vibrant-purple-neon);
+        box-shadow: 0 0 20px rgba(138, 43, 226, 0.6);
+        transform: translateY(-2px);
+    }
+
+    .mobile-menu {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .mobile-menu span {
+        width: 25px;
+        height: 3px;
+        background: var(--pure-white);
+        margin: 3px 0;
+        transition: 0.3s;
+    }
+
+    /* Page Content */
+    .page {
+        display: none;
+        min-height: 100vh;
+        padding-top: 100px;
+    }
+
+    .page.active {
+        display: block;
+    }
+
+    /* Home Page */
+    .hero {
+        height: calc(100vh - 100px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        background: 
+            radial-gradient(circle at 20% 80%, rgba(138, 43, 226, 0.2) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(138, 43, 226, 0.15) 0%, transparent 50%),
+            var(--pure-black);
+    }
+
+    .hero-content {
+        max-width: 900px;
+    }
+
+    .hero h1 {
+        font-size: 5.5rem;
+        font-weight: 900;
+        color: var(--pure-white);
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        text-shadow: 
+            0 0 30px rgba(255, 255, 255, 0.3),
+            0 0 60px rgba(138, 43, 226, 0.2);
+        line-height: 1.1;
+    }
+
+    .hero .tagline {
+        font-size: 1.8rem;
+        color: var(--vibrant-purple-neon);
+        margin-bottom: 2.5rem;
+        font-weight: 400;
+        letter-spacing: 4px;
+        text-shadow: 0 0 20px rgba(179, 71, 217, 0.6);
+        text-transform: uppercase;
+    }
+
+    .hero .subtitle {
+        font-size: 1.4rem;
+        color: var(--off-white);
+        margin-bottom: 4rem;
+        line-height: 1.8;
+        font-weight: 300;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 3rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        padding: 22px 45px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px;
+        border: 3px solid;
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+        border-radius: 0;
+        font-size: 1rem;
+        cursor: pointer;
+        background: none;
+    }
+
+    .btn-primary {
+        background: var(--vibrant-purple);
+        color: var(--pure-white);
+        border-color: var(--vibrant-purple);
+        box-shadow: 
+            0 0 30px rgba(138, 43, 226, 0.5),
+            inset 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+
+    .btn-primary:hover {
+        background: var(--vibrant-purple-neon);
+        border-color: var(--pure-white);
+        box-shadow: 
+            0 0 50px rgba(179, 71, 217, 0.8),
+            0 0 80px rgba(138, 43, 226, 0.4);
+        transform: translateY(-4px);
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: var(--pure-white);
+        border-color: var(--pure-white);
+    }
+
+    .btn-secondary:hover {
+        background: var(--pure-white);
+        color: var(--pure-black);
+        transform: translateY(-4px);
+    }
+
+    /* Services Section */
+    .services-content {
+        padding: 4rem 0;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 3rem;
+        margin-top: 3rem;
+    }
+
+    .service-card {
+        background: linear-gradient(135deg, var(--soft-black), var(--matte-black));
+        padding: 3.5rem 2.5rem;
+        text-align: center;
+        transition: all 0.5s ease;
+        border: 2px solid transparent;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .service-card:hover {
+        transform: translateY(-15px);
+        border-color: var(--pure-white);
+        box-shadow: 
+            0 25px 50px rgba(138, 43, 226, 0.4),
+            0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .service-icon {
+        font-size: 4.5rem;
+        margin-bottom: 2rem;
+        background: linear-gradient(135deg, var(--pure-white), var(--vibrant-purple-neon));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .service-card h3 {
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+        color: var(--pure-white);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 700;
+    }
+
+    .service-card .price {
+        font-size: 1.3rem;
+        color: var(--vibrant-purple-neon);
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    .service-card p {
+        color: var(--off-white);
+        line-height: 1.8;
+        font-size: 1.1rem;
+        opacity: 0.9;
+    }
+
+    /* Portfolio Section */
+    .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .portfolio-item {
+        background: var(--matte-black);
+        aspect-ratio: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid var(--vibrant-purple);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .portfolio-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 30px rgba(138, 43, 226, 0.6);
+    }
+
+    .portfolio-placeholder {
+        color: var(--vibrant-purple-neon);
+        font-size: 1.2rem;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    /* About Section */
+    .about-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 4rem 0;
+        text-align: center;
+    }
+
+    .about-content h2 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+        color: var(--pure-white);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .about-content p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        margin-bottom: 2rem;
+        color: var(--off-white);
+    }
+
+    /* Contact Section */
+    .contact-content {
+        padding: 4rem 0;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        margin-top: 3rem;
+    }
+
+    .contact-info h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        color: var(--vibrant-purple-neon);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .contact-info p {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        color: var(--off-white);
+    }
+
+    .contact-form {
+        background: var(--matte-black);
+        padding: 2.5rem;
+        border: 2px solid var(--vibrant-purple);
+    }
+
+    .contact-form h3 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+        color: var(--pure-white);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: var(--pure-white);
+        font-weight: 600;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        width: 100%;
+        padding: 15px;
+        border: 2px solid var(--vibrant-purple);
+        background: var(--pure-black);
+        color: var(--pure-white);
+        font-size: 1rem;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+        outline: none;
+        border-color: var(--vibrant-purple-neon);
+        box-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+    }
+
+    /* Booking Section */
+    .booking-content {
+        padding: 4rem 0;
+    }
+
+    .booking-steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .booking-step {
+        background: var(--matte-black);
+        padding: 2rem;
+        text-align: center;
+        border: 2px solid var(--vibrant-purple);
+        position: relative;
+    }
+
+    .step-number {
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--vibrant-purple);
+        color: var(--pure-white);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+    }
+
+    .booking-step h4 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        color: var(--pure-white);
+        text-transform: uppercase;
+    }
+
+    /* Shared Styles */
+    .section-title {
+        text-align: center;
+        font-size: 3.8rem;
+        color: var(--pure-white);
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        margin-bottom: 1.5rem;
+        font-weight: 900;
+        text-shadow: 
+            0 0 30px rgba(255, 255, 255, 0.3),
+            0 0 60px rgba(138, 43, 226, 0.2);
+    }
+
+    .section-subtitle {
+        text-align: center;
+        font-size: 1.6rem;
+        color: var(--vibrant-purple-neon);
+        margin-bottom: 2rem;
+        letter-spacing: 3px;
+        text-shadow: 0 0 15px rgba(179, 71, 217, 0.5);
+        text-transform: uppercase;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .nav-links {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: var(--pure-black);
+            flex-direction: column;
+            padding: 2rem 0;
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .mobile-menu {
+            display: flex;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            letter-spacing: 3px;
+        }
+
+        .contact-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .cta-buttons {
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+    }
+
+    /* Success Message */
+    .success-message {
+        background: var(--vibrant-purple);
+        color: var(--pure-white);
+        padding: 1rem;
+        margin-top: 1rem;
+        text-align: center;
+        display: none;
+    }
+
+    .success-message.show {
+        display: block;
+    }
+</style>
+
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo" onclick="showPage('home')">Crown Chemist</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" onclick="showPage('home')" class="nav-link">Home</a></li>
+                <li><a href="#" onclick="showPage('services')" class="nav-link">Services</a></li>
+                <li><a href="#" onclick="showPage('portfolio')" class="nav-link">Portfolio</a></li>
+                <li><a href="#" onclick="showPage('about')" class="nav-link">About</a></li>
+                <li><a href="#" onclick="showPage('contact')" class="nav-link">Contact</a></li>
+                <li><a href="#" onclick="showPage('booking')" class="nav-link book-btn-nav">Book Now</a></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+```
+<!-- HOME PAGE -->
+<div id="home" class="page active">
+    <section class="hero">
+        <div class="hero-content container">
+            <h1>Crown Chemist</h1>
+            <p class="tagline">Pure Vision. Bold Reality.</p>
+            <p class="subtitle">Master architect of impossible color and radical transformation. Where mathematical precision meets artistic rebellion, creating looks that redefine the boundaries of beauty.</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary" onclick="showPage('booking')">Unleash Your Vision</button>
+                <button class="btn btn-secondary" onclick="showPage('portfolio')">Witness Perfection</button>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- SERVICES PAGE -->
+<div id="services" class="page">
+    <div class="container services-content">
+        <h2 class="section-title">Precision & Power</h2>
+        <p class="section-subtitle">Where contrast creates magic</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">⚗️</div>
+                <h3>Color Mathematics</h3>
+                <div class="price">Starting at $150</div>
+                <p>Scientific precision meets artistic vision. Advanced formulation techniques that achieve perfect saturation and impossible gradients with mathematical accuracy.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🎨</div>
+                <h3>Fantasy Realization</h3>
+                <div class="price">Starting at $200</div>
+                <p>Vibrant purples, electric blues, pure whites. Every fantasy color brought to vivid life with intensity that defies natural law.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">💎</div>
+                <h3>Precision Carved Art</h3>
+                <div class="price">Starting at $80</div>
+                <p>Geometric perfection etched with surgical precision. Clean lines and bold patterns that showcase technical mastery and artistic vision.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h3>Bold Statement Styling</h3>
+                <div class="price">Starting at $120</div>
+                <p>High-contrast looks that command absolute attention. For those who refuse compromise and demand perfection in their rebellion.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🔬</div>
+                <h3>Color Correction</h3>
+                <div class="price">Starting at $180</div>
+                <p>Advanced correction techniques to fix previous work and achieve your dream color. No challenge too complex for our expertise.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">✨</div>
+                <h3>Full Transformation</h3>
+                <div class="price">Starting at $350</div>
+                <p>Complete makeover including cut, color, and styling. The ultimate Crown Chemist experience for total reinvention.</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 4rem;">
+            <button class="btn btn-primary" onclick="showPage('booking')">Book Your Service</button>
+        </div>
+    </div>
+</div>
+
+<!-- PORTFOLIO PAGE -->
+<div id="portfolio" class="page">
+    <div class="container">
+        <h2 class="section-title">Witness Perfection</h2>
+        <p class="section-subtitle">Where vision becomes reality</p>
+        
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <div class="portfolio-placeholder">
+                    <h4>Electric Purple Fantasy</h4>
+                    <p>Vibrant transformation with precision fade</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-placeholder">
+                    <h4>Geometric Undercut Art</h4>
+                    <p>Mathematical precision in carved design</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-placeholder">
+                    <h4>Color Correction Miracle</h4>
+                    <p>From damaged to divine</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-placeholder">
+                    <h4>Holographic Color Blend</h4>
+                    <p>Multi-dimensional color mastery</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-placeholder">
+                    <h4>Bold Statement Cut</h4>
+                    <p>Architecture meets artistry</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-placeholder">
+                    <h4>Fantasy Color Correction</h4>
+                    <p>Impossible made possible</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 4rem;">
+            <button class="btn btn-primary" onclick="showPage('booking')">Ready For Your Transformation?</button>
+        </div>
+    </div>
+</div>
+
+<!-- ABOUT PAGE -->
+<div id="about" class="page">
+    <div class="container">
+        <div class="about-content">
+            <h2 class="section-title">The Artist</h2>
+            <p class="section-subtitle">Where science meets rebellion</p>
+            
+            <p>Welcome to Crown Chemist, where I transform hair into art through the precise application of color theory and cutting-edge techniques. My approach combines scientific methodology with artistic vision, ensuring every client receives a look that's both technically perfect and creatively bold.</p>
+
+            <p>Specializing in fantasy colors, alternative styling, and precision-carved designs, I work with clients who aren't afraid to stand out. Each appointment is a collaborative journey where your wildest hair dreams become reality through careful consultation, expert technique, and uncompromising attention to detail.</p>
+
+            <p>My studio is equipped with professional-grade products and tools, ensuring not only stunning results but also the health and integrity of your hair. Whether you're looking for a subtle transformation or a complete reinvention, I'm here to guide you through the process with expertise you can trust.</p>
+
+            <p>Book your consultation today and discover what happens when precision meets passion in the art of hair design.</p>
+
+            <div style="margin-top: 3rem;">
+                <button class="btn btn-primary" onclick="showPage('booking')">Book Your Consultation</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CONTACT PAGE -->
+<div id="contact" class="page">
+    <div class="container contact-content">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Ready to begin your transformation?</p>
+        
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Studio Information</h3>
+                <p><strong>📍 Location:</strong><br>
+                1051 NE 6th st <br> Suite F<br>
+                Grants Pass, OR 97526</p>
+                
+                <p><strong>📞 Phone:</strong><br>
+                (541) 941 0767</p>
+                
+                <p><strong>⏰ Hours:</strong><br>
+                Thursday - Sunday: 9am - 7pm<br>
+                Monday - Wednesday: Closed</p>
+                
+                <p><strong>✉️ Email:</strong><br>
+                crownchemiststudio@gmail.com</p>
+                
+                <p><strong>📱 Social:</strong><br>
+                @crownchemist on Instagram<br>
+                @crownchemist on TikTok</p>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Send a Message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject">
+                            <option value="general">General Inquiry</option>
+                            <option value="booking">Booking Question</option>
+                            <option value="consultation">Consultation Request</option>
+                            <option value="collaboration">Collaboration</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+                <div class="success-message" id="contactSuccess">
+                    Message sent successfully! I'll get back to you within 24 hours.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BOOKING PAGE -->
+<div id="booking" class="page">
+    <div class="container booking-content">
+        <h2 class="section-title">Book Your Transformation</h2>
+        <p class="section-subtitle">Your vision awaits</p>
+        
+        <div class="booking-steps">
+            <div class="booking-step">
+                <div class="step-number">1</div>
+                <h4>Choose Your Service</h4>
+                <p>Select from our precision services or book a consultation to discuss your vision.</p>
+            </div>
+            
+            <div class="booking-step">
+                <div class="step-number">2</div>
+                <h4>Schedule Your Time</h4>
+                <p>Pick a date and time that works for your transformation journey.</p>
+            </div>
+            
+            <div class="booking-step">
+                <div class="step-number">3</div>
+                <h4>Consultation Call</h4>
+                <p>I'll contact you to discuss your goals and prepare for your appointment.</p>
+            </div>
+            
+            <div class="booking-step">
+                <div class="step-number">4</div>
+                <h4>Create Magic</h4>
+                <p>Experience the Crown Chemist difference as your vision becomes reality.</p>
+            </div>
+        </div>
+
+        <div class="contact-form" style="max-width: 600px; margin: 4rem auto 0;">
+            <h3>Book Your Appointment</h3>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="bookingName">Name *</label>
+                    <input type="text" id="bookingName" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="bookingEmail">Email *</label>
+                    <input type="email" id="bookingEmail" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="bookingPhone">Phone *</label>
+                    <input type="tel" id="bookingPhone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="service">Desired Service *</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select a Service</option>
+                        <option value="consultation">Consultation ($50)</option>
+                        <option value="color-math">Color Mathematics ($150+)</option>
+                        <option value="fantasy">Fantasy Realization ($200+)</option>
+                        <option value="carved-art">Precision Carved Art ($80+)</option>
+                        <option value="statement">Bold Statement Styling ($120+)</option>
+                        <option value="correction">Color Correction ($180+)</option>
+                        <option value="transformation">Full Transformation ($350+)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="preferredDate">Preferred Date *</label>
+                    <input type="date" id="preferredDate" name="preferredDate" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="preferredTime">Preferred Time *</label>
+                    <select id="preferredTime" name="preferredTime" required>
+                        <option value="">Select Time</option>
+                        <option value="9:00">9:00 AM</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="12:00">12:00 PM</option>
+                        <option value="13:00">1:00 PM</option>
+                        <option value="14:00">2:00 PM</option>
+                        <option value="15:00">3:00 PM</option>
+                        <option value="16:00">4:00 PM</option>
+                        <option value="17:00">5:00 PM</option>
+                        <option value="18:00">6:00 PM</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="currentHair">Current Hair Description *</label>
+                    <textarea id="currentHair" name="currentHair" rows="3" placeholder="Describe your current hair color, length, and any previous chemical treatments..." required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="goalDescription">Your Vision *</label>
+                    <textarea id="goalDescription" name="goalDescription" rows="4" placeholder="Describe your dream look, inspiration images, color goals..." required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="budget">Budget Range</label>
+                    <select id="budget" name="budget">
+                        <option value="">Select Budget Range</option>
+                        <option value="under-200">Under $200</option>
+                        <option value="200-400">$200 - $400</option>
+                        <option value="400-600">$400 - $600</option>
+                        <option value="600-plus">$600+</option>
+                        <option value="consultation-first">Consultation First</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="specialRequests">Special Requests or Questions</label>
+                    <textarea id="specialRequests" name="specialRequests" rows="3" placeholder="Any allergies, specific scheduling needs, or additional questions..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Submit Booking Request</button>
+            </form>
+            <div class="success-message" id="bookingSuccess">
+                Booking request submitted! I'll contact you within 24 hours to confirm your appointment and discuss your transformation goals.
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Navigation functionality
+    function showPage(pageId) {
+        // Hide all pages
+        const pages = document.querySelectorAll('.page');
+        pages.forEach(page => page.classList.remove('active'));
+        
+        // Show selected page
+        document.getElementById(pageId).classList.add('active');
+        
+        // Update nav links
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => link.classList.remove('active'));
+        
+        // Find and activate current nav link
+        const currentLink = document.querySelector(`[onclick="showPage('${pageId}')"]`);
+        if (currentLink && currentLink.classList.contains('nav-link')) {
+            currentLink.classList.add('active');
+        }
+        
+        // Close mobile menu if open
+        document.getElementById('navLinks').classList.remove('active');
+        
+        // Scroll to top
+        window.scrollTo(0, 0);
+    }
+
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+        const navLinks = document.getElementById('navLinks');
+        navLinks.classList.toggle('active');
+    }
+
+    // Form submissions
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Simulate form submission
+        setTimeout(() => {
+            document.getElementById('contactSuccess').classList.add('show');
+            this.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                document.getElementById('contactSuccess').classList.remove('show');
+            }, 5000);
+        }, 1000);
+    });
+
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Simulate form submission
+        setTimeout(() => {
+            document.getElementById('bookingSuccess').classList.add('show');
+            this.reset();
+            
+            // Hide success message after 8 seconds
+            setTimeout(() => {
+                document.getElementById('bookingSuccess').classList.remove('show');
+            }, 8000);
+        }, 1000);
+    });
+
+    // Set minimum date for booking (today)
+    document.getElementById('preferredDate').min = new Date().toISOString().split('T')[0];
+
+    // Smooth scroll for internal navigation
+    document.addEventListener('DOMContentLoaded', function() {
+        // Set home as active on load
+        showPage('home');
+    });
+
+    // Handle browser back/forward
+    window.addEventListener('popstate', function(e) {
+        const page = e.state ? e.state.page : 'home';
+        showPage(page);
+    });
+
+    // Add to browser history when navigating
+    const originalShowPage = showPage;
+    showPage = function(pageId) {
+        originalShowPage(pageId);
+        history.pushState({page: pageId}, '', `#${pageId}`);
+    };
+
+    // Handle direct URL access
+    window.addEventListener('load', function() {
+        const hash = window.location.hash.replace('#', '');
+        const validPages = ['home', 'services', 'portfolio', 'about', 'contact', 'booking'];
+        
+        if (validPages.includes(hash)) {
+            showPage(hash);
+        } else {
+            showPage('home');
+        }
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+        const navLinks = document.getElementById('navLinks');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        if (!navLinks.contains(e.target) && !mobileMenu.contains(e.target)) {
+            navLinks.classList.remove('active');
+        }
+    });
+
+    // Add loading states to buttons
+    document.querySelectorAll('form').forEach(form => {
+        form.addEventListener('submit', function() {
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+    });
+
+    // Enhanced form validation
+    document.getElementById('bookingForm').addEventListener('input', function(e) {
+        const target = e.target;
+        
+        // Real-time validation feedback
+        if (target.type === 'email') {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (target.value && !emailRegex.test(target.value)) {
+                target.style.borderColor = '#ff4444';
+            } else {
+                target.style.borderColor = '#8A2BE2';
+            }
+        }
+        
+        if (target.type === 'tel') {
+            const phoneRegex = /^[\+]?[(]?[\d\s\-\(\)]{10,}$/;
+            if (target.value && !phoneRegex.test(target.value)) {
+                target.style.borderColor = '#ff4444';
+            } else {
+                target.style.borderColor = '#8A2BE2';
+            }
+        }
+    });
+
+    // Auto-resize textareas
+    document.querySelectorAll('textarea').forEach(textarea => {
+        textarea.addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = this.scrollHeight + 'px';
+        });
+    });
+
+    // Service price calculator
+    document.getElementById('service').addEventListener('change', function() {
+        const budgetSelect = document.getElementById('budget');
+        const serviceValue = this.value;
+        
+        // Auto-suggest budget based on service
+        if (serviceValue === 'consultation') {
+            budgetSelect.value = 'under-200';
+        } else if (serviceValue === 'carved-art' || serviceValue === 'statement') {
+            budgetSelect.value = '200-400';
+        } else if (serviceValue === 'color-math' || serviceValue === 'fantasy' || serviceValue === 'correction') {
+            budgetSelect.value = '200-400';
+        } else if (serviceValue === 'transformation') {
+            budgetSelect.value = '400-600';
+        }
+    });
+</script>
+```
+
+</body>
+</html>
