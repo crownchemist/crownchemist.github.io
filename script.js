@@ -31,20 +31,6 @@ function toggleMobileMenu() {
 }
 
 // Form submissions
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Simulate form submission
-    setTimeout(() => {
-        document.getElementById('contactSuccess').classList.add('show');
-        this.reset();
-        
-        // Hide success message after 5 seconds
-        setTimeout(() => {
-            document.getElementById('contactSuccess').classList.remove('show');
-        }, 5000);
-    }, 1000);
-});
 
 document.getElementById('bookingForm').addEventListener('submit', function(e) {
     e.preventDefault();
