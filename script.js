@@ -32,20 +32,6 @@ function toggleMobileMenu() {
 
 // Form submissions
 
-document.getElementById('bookingForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Simulate form submission
-    setTimeout(() => {
-        document.getElementById('bookingSuccess').classList.add('show');
-        this.reset();
-        
-        // Hide success message after 8 seconds
-        setTimeout(() => {
-            document.getElementById('bookingSuccess').classList.remove('show');
-        }, 8000);
-    }, 1000);
-});
 
 // Set minimum date for booking (today)
 document.getElementById('preferredDate').min = new Date().toISOString().split('T')[0];
