@@ -64,36 +64,39 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
 // Set minimum date for booking (today)
 document.getElementById('preferredDate').min = new Date().toISOString().split('T')[0];
 
-// Smooth scroll for internal navigation
-document.addEventListener('DOMContentLoaded', function() {
-    // Set home as active on load
-    showPage('home');
-});
-
-// Handle browser back/forward
-window.addEventListener('popstate', function(e) {
-    const page = e.state ? e.state.page : 'home';
-    showPage(page);
-});
-
-// Add to browser history when navigating
-const originalShowPage = showPage;
-showPage = function(pageId) {
-    originalShowPage(pageId);
-    history.pushState({page: pageId}, '', `#${pageId}`);
-};
-
-// Handle direct URL access
-window.addEventListener('load', function() {
-    const hash = window.location.hash.replace('#', '');
-    const validPages = ['home', 'services', 'portfolio', 'about', 'contact', 'booking'];
-    
-    if (validPages.includes(hash)) {
-        showPage(hash);
-    } else {
+// Only run single-page navigation logic on index.html
+if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname === '/crownchemist.github.io/') {
+    // Smooth scroll for internal navigation
+    document.addEventListener('DOMContentLoaded', function() {
+        // Set home as active on load
         showPage('home');
-    }
-});
+    });
+
+    // Handle browser back/forward
+    window.addEventListener('popstate', function(e) {
+        const page = e.state ? e.state.page : 'home';
+        showPage(page);
+    });
+
+    // Add to browser history when navigating
+    const originalShowPage = showPage;
+    showPage = function(pageId) {
+        originalShowPage(pageId);
+        history.pushState({page: pageId}, '', `#${pageId}`);
+    };
+
+    // Handle direct URL access
+    window.addEventListener('load', function() {
+        const hash = window.location.hash.replace('#', '');
+        const validPages = ['home', 'services', 'portfolio', 'about', 'contact', 'booking'];
+        
+        if (validPages.includes(hash)) {
+            showPage(hash);
+        } else {
+            showPage('home');
+        }
+    });
+}
 
 // Close mobile menu when clicking outside
 document.addEventListener('click', function(e) {
