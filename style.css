@@ -197,7 +197,11 @@
             flex-wrap: wrap;
         }
 
-        .btn {
+
+        .btn,
+        .btn:link,
+        .btn:visited {
+            display: inline-block;
             padding: 22px 45px;
             text-decoration: none;
             text-transform: uppercase;
@@ -211,6 +215,8 @@
             font-size: 1rem;
             cursor: pointer;
             background: none;
+            text-align: center;
+            border: none;
         }
 
         .btn-primary {
