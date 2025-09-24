@@ -1,0 +1,57 @@
+<!-- ABOUT PAGE -->
+ <!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Crown Chemist | About</title>
+    
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo" onclick="showPage('home')">
+                <img src="logoname-wide.png" alt="Crown Chemist" style="max-height: 50px; width: auto;">
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="https://crownchemist.github.io/index.html" onclick="showPage('home')" class="nav-link">Home</a></li>
+                <li><a href="https://crownchemist.github.io/services.html" onclick="showPage('services')" class="nav-link">Services</a></li>
+                <li><a href="https://crownchemist.github.io/portfolio.html" onclick="showPage('portfolio')" class="nav-link">Portfolio</a></li>
+                <li><a href="https://crownchemist.github.io/about.html" onclick="showPage('about')" class="nav-link">About</a></li>
+                <li><a href="https://crownchemist.github.io/contact.html" onclick="showPage('contact')" class="nav-link">Contact</a></li>
+                <li><a href="https://crownchemist.github.io/booking.html" onclick="showPage('booking')" class="nav-link book-btn-nav">Book Now</a></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+
+<div id="about" class="page">
+    <div class="container">
+        <div class="about-content">
+            <h2 class="section-title">The Artist</h2>
+            <p class="section-subtitle">Where science meets rebellion</p>
+            
+            <p>Welcome to Crown Chemist, where I transform hair into art through the precise application of color theory and cutting-edge techniques. My approach combines scientific methodology with artistic vision, ensuring every client receives a look that's both technically perfect and creatively bold.</p>
+
+            <p>Specializing in fantasy colors, alternative styling, and precision-carved designs, I work with clients who aren't afraid to stand out. Each appointment is a collaborative journey where your wildest hair dreams become reality through careful consultation, expert technique, and uncompromising attention to detail.</p>
+
+            <p>My studio is equipped with professional-grade products and tools, ensuring not only stunning results but also the health and integrity of your hair. Whether you're looking for a subtle transformation or a complete reinvention, I'm here to guide you through the process with expertise you can trust.</p>
+
+            <p>Book your consultation today and discover what happens when precision meets passion in the art of hair design.</p>
+
+            <div style="margin-top: 3rem;">
+                <button class="btn btn-primary" onclick="showPage('booking')">Book Your Consultation</button>
+            </div>
+        </div>
+    </div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>

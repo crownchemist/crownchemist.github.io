@@ -1,0 +1,158 @@
+<!-- BOOKING PAGE -->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Crown Chemist | Booking</title>
+    
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo" onclick="showPage('home')">
+                <img src="logoname-wide.png" alt="Crown Chemist" style="max-height: 50px; width: auto;">
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="https://crownchemist.github.io/index.html" onclick="showPage('home')" class="nav-link">Home</a></li>
+                <li><a href="https://crownchemist.github.io/services.html" onclick="showPage('services')" class="nav-link">Services</a></li>
+                <li><a href="https://crownchemist.github.io/portfolio.html" onclick="showPage('portfolio')" class="nav-link">Portfolio</a></li>
+                <li><a href="https://crownchemist.github.io/about.html" onclick="showPage('about')" class="nav-link">About</a></li>
+                <li><a href="https://crownchemist.github.io/contact.html" onclick="showPage('contact')" class="nav-link">Contact</a></li>
+                <li><a href="https://crownchemist.github.io/booking.html" onclick="showPage('booking')" class="nav-link book-btn-nav">Book Now</a></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+
+<div id="booking" class="page">
+    <div class="container booking-content">
+        <h2 class="section-title">Book Your Transformation</h2>
+        <p class="section-subtitle">Your vision awaits</p>
+        
+        <div class="booking-steps">
+            <div class="booking-step">
+                <div class="step-number">1</div>
+                <h4>Choose Your Service</h4>
+                <p>Select from our many useful services or book a consultation to discuss your vision.</p>
+            </div>
+            
+            <div class="booking-step">
+                <div class="step-number">2</div>
+                <h4>Schedule Your Time</h4>
+                <p>Pick a date and time that works for your transformation journey.</p>
+            </div>
+            
+            <div class="booking-step">
+                <div class="step-number">3</div>
+                <h4>Consultation Call</h4>
+                <p>I'll contact you to discuss your goals and prepare for your appointment.</p>
+            </div>
+            
+            <div class="booking-step">
+                <div class="step-number">4</div>
+                <h4>Create Magic</h4>
+                <p>Experience the Crown Chemist difference as your vision becomes reality.</p>
+            </div>
+        </div>
+
+        <div class="contact-form" style="max-width: 600px; margin: 4rem auto 0;">
+            <h3>Book Your Appointment</h3>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="bookingName">Name *</label>
+                    <input type="text" id="bookingName" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="bookingEmail">Email *</label>
+                    <input type="email" id="bookingEmail" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="bookingPhone">Phone *</label>
+                    <input type="tel" id="bookingPhone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="service">Desired Service *</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select a Service</option>
+                        <option value="consultation">Consultation ($50)</option>
+                        <option value="color-math">Color Mathematics ($150+)</option>
+                        <option value="fantasy">Fantasy Realization ($200+)</option>
+                        <option value="carved-art">Precision Carved Art ($80+)</option>
+                        <option value="statement">Bold Statement Styling ($120+)</option>
+                        <option value="correction">Color Correction ($180+)</option>
+                        <option value="transformation">Full Transformation ($350+)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="preferredDate">Preferred Date *</label>
+                    <input type="date" id="preferredDate" name="preferredDate" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="preferredTime">Preferred Time *</label>
+                    <select id="preferredTime" name="preferredTime" required>
+                        <option value="">Select Time</option>
+                        <option value="9:00">9:00 AM</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="12:00">12:00 PM</option>
+                        <option value="13:00">1:00 PM</option>
+                        <option value="14:00">2:00 PM</option>
+                        <option value="15:00">3:00 PM</option>
+                        <option value="16:00">4:00 PM</option>
+                        <option value="17:00">5:00 PM</option>
+                        <option value="18:00">6:00 PM</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="currentHair">Current Hair Description *</label>
+                    <textarea id="currentHair" name="currentHair" rows="3" placeholder="Describe your current hair color, length, and any previous chemical treatments..." required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="goalDescription">Your Vision *</label>
+                    <textarea id="goalDescription" name="goalDescription" rows="4" placeholder="Describe your dream look, inspiration images, color goals..." required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="budget">Budget Range</label>
+                    <select id="budget" name="budget">
+                        <option value="">Select Budget Range</option>
+                        <option value="under-200">Under $200</option>
+                        <option value="200-400">$200 - $400</option>
+                        <option value="400-600">$400 - $600</option>
+                        <option value="600-plus">$600+</option>
+                        <option value="consultation-first">Consultation First</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="specialRequests">Special Requests or Questions</label>
+                    <textarea id="specialRequests" name="specialRequests" rows="3" placeholder="Any allergies, specific scheduling needs, or additional questions..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Submit Booking Request</button>
+            </form>
+            <div class="success-message" id="bookingSuccess">
+                Booking request submitted! I'll contact you within 24 hours to confirm your appointment and discuss your hair goals. <br>
+                Thank you for choosing <b>Crown Chemist</b>! - <i>Katie G</i>
+            </div>
+        </div>
+    </div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>    
