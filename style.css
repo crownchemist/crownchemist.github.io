@@ -6,15 +6,16 @@
 }
 
 
+
 .contact-info-box {
-    border: 2px solid #8A2BE2;
+    border: none;
     border-radius: 12px;
     background: rgba(30, 30, 30, 0.85);
     padding: 2rem;
     margin-bottom: 2rem;
     box-shadow:
-        0 0 24px 4px rgba(106, 27, 154, 0.7), /* dark purple glow */
-        0 4px 24px rgba(138, 43, 226, 0.12);
+        0 0 48px 12px rgba(106, 27, 154, 0.95), /* intense dark purple glow */
+        0 0 80px 8px rgba(138, 43, 226, 0.5);
     flex: 1 1 320px;
     min-width: 280px;
     max-width: 400px;
