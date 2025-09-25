@@ -452,6 +452,15 @@
             box-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
         }
 
+        .contact-info-box {
+            border: 2px solid #42136f; /* or your brand color */
+            border-radius: 12px;
+            background: rgba(30, 30, 30, 0.85);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 24px rgba(138, 43, 226, 0.08);
+}
+
         /* Booking Section */
         .booking-content {
             padding: 4rem 0 6rem 0;
