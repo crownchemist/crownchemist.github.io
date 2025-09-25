@@ -1,3 +1,37 @@
+.contact-grid {
+    display: flex;
+    gap: 4rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.contact-info-box {
+    border: 2px solid #8A2BE2;
+    border-radius: 12px;
+    background: rgba(30, 30, 30, 0.85);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 24px rgba(138, 43, 226, 0.08);
+    flex: 1 1 320px;
+    min-width: 280px;
+    max-width: 400px;
+}
+
+.contact-form {
+    flex: 2 1 400px;
+    min-width: 280px;
+}
+
+@media (max-width: 900px) {
+    .contact-grid {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .contact-info-box, .contact-form {
+        max-width: 100%;
+        min-width: 0;
+    }
+}
 /* Custom styled text link (not button) */
 .text-link {
     color: #DA9100;
