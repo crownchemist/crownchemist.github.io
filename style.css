@@ -1,41 +1,4 @@
-.contact-grid {
-    display: flex;
-    gap: 4rem;
-    margin-top: 3rem;
-    flex-wrap: wrap;
-}
 
-
-
-.contact-info-box {
-    border: none;
-    border-radius: 12px;
-    background: rgba(30, 30, 30, 0.85);
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow:
-        0 0 48px 12px rgba(106, 27, 154, 0.95), /* intense dark purple glow */
-        0 0 80px 8px rgba(138, 43, 226, 0.5);
-    flex: 1 1 320px;
-    min-width: 280px;
-    max-width: 400px;
-}
-
-.contact-form {
-    flex: 2 1 400px;
-    min-width: 280px;
-}
-
-@media (max-width: 900px) {
-    .contact-grid {
-        flex-direction: column;
-        gap: 2rem;
-    }
-    .contact-info-box, .contact-form {
-        max-width: 100%;
-        min-width: 0;
-    }
-}
 /* Custom styled text link (not button) */
 .text-link {
     color: #DA9100;
@@ -421,15 +384,45 @@
         }
 
         /* Contact Section */
-        .contact-content {
-            padding: 4rem 0 6rem 0;
-        }
-
         .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            display: flex;
             gap: 4rem;
             margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+.contact-info-box {
+    border: none;
+    border-radius: 12px;
+    background: rgba(30, 30, 30, 0.85);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow:
+        0 0 48px 12px rgba(106, 27, 154, 0.95), /* intense dark purple glow */
+        0 0 80px 8px rgba(138, 43, 226, 0.5);
+    flex: 1 1 320px;
+    min-width: 280px;
+    max-width: 400px;
+}
+
+.contact-form {
+    flex: 2 1 400px;
+    min-width: 280px;
+}
+
+@media (max-width: 900px) {
+    .contact-grid {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .contact-info-box, .contact-form {
+        max-width: 100%;
+        min-width: 0;
+    }
+}
+
+        .contact-content {
+            padding: 4rem 0 6rem 0;
         }
 
         .contact-info h3 {
@@ -489,15 +482,6 @@
             border-color: var(--vibrant-purple-neon);
             box-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
         }
-
-        .contact-info-box {
-            border: 2px solid #42136f; /* or your brand color */
-            border-radius: 12px;
-            background: rgba(30, 30, 30, 0.85);
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 24px rgba(138, 43, 226, 0.08);
-}
 
         /* Booking Section */
         .booking-content {
