@@ -3,34 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <title>Book a Session</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
-    body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 0; }
-    .booking-container { max-width: 600px; margin: auto; padding: 20px; }
-    .book-btn {
-      background: #0077cc;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 8px;
-      font-size: 18px;
-      cursor: pointer;
-      transition: 0.3s;
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f6f8;
+      color: #333;
     }
-    .book-btn:hover { background: #005fa3; }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+      background: linear-gradient(135deg, #0077cc, #00b3ff);
+      color: white;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    header p {
+      margin: 8px 0 0;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    .booking-container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    .calendly-inline-widget {
+      min-width: 100%;
+      height: 800px;
+    }
+
+    @media (max-width: 768px) {
+      .booking-container {
+        margin: 15px;
+        padding: 15px;
+      }
+      .calendly-inline-widget {
+        height: 1000px; /* more room for scrolling on small screens */
+      }
+      header h1 { font-size: 1.8rem; }
+      header p { font-size: 1rem; }
+    }
   </style>
 </head>
 <body>
-  <div class="booking-container">
+
+  <!-- Header -->
+  <header>
     <h1>Book Your Appointment</h1>
-    <!-- Button that triggers Calendly popup -->
-    <button class="book-btn"
-      onclick="Calendly.initPopupWidget({url: 'https://calendly.com/crownchemiststudio'});return false;">
-      Book Now
-    </button>
+    <p>Choose a time that works best for you below</p>
+  </header>
+
+  <!-- Booking Widget -->
+  <div class="booking-container">
+    <div class="calendly-inline-widget"
+         data-url="https://calendly.com/crownchemiststudio">
+    </div>
   </div>
 
-  <script type="text/javascript" 
+  <!-- Calendly Script -->
+  <script type="text/javascript"
           src="https://assets.calendly.com/assets/external/widget.js">
   </script>
+
 </body>
 </html>
