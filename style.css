@@ -1,3 +1,17 @@
+.calendly-wrapper {
+  background: var(--matte-black);
+  border: 2px solid var(--vibrant-purple);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 3rem;
+  box-shadow: 0 0 40px rgba(138, 43, 226, 0.4);
+}
+
+@media (max-width: 768px) {
+  .calendly-inline-widget {
+    height: 1100px !important; /* more room for scrolling on phones */
+  }
+}
 
 /* Custom styled text link (not button) */
 .text-link {
