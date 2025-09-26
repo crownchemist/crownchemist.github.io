@@ -12,7 +12,8 @@
 .text-link:hover,
 .text-link:focus {
     color: #E6BE8A;
-    text-decoration: underline;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
 }
    
         * {

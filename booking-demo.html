@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book a Session</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 0; }
+    .booking-container { max-width: 600px; margin: auto; padding: 20px; }
+    .book-btn {
+      background: #0077cc;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .book-btn:hover { background: #005fa3; }
+  </style>
+</head>
+<body>
+  <div class="booking-container">
+    <h1>Book Your Appointment</h1>
+    <!-- Button that triggers Calendly popup -->
+    <button class="book-btn"
+      onclick="Calendly.initPopupWidget({url: 'https://calendly.com/crownchemiststudio'});return false;">
+      Book Now
+    </button>
+  </div>
+
+  <script type="text/javascript" 
+          src="https://assets.calendly.com/assets/external/widget.js">
+  </script>
+</body>
+</html>
