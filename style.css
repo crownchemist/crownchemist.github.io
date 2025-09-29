@@ -421,8 +421,8 @@ Calendly.initInlineWidget({
     padding: 2rem;
     margin-bottom: 2rem;
     box-shadow:
-        0 0 48px 12px rgba(106, 27, 154, 0.95), /* intense dark purple glow */
-        0 0 80px 8px rgba(138, 43, 226, 0.5);
+        0 0 38px 12px rgba(106, 27, 154, 0.75), /* intense dark purple glow */
+        0 0 70px 8px rgba(138, 43, 226, 0.4);
     flex: 1 1 320px;
     min-width: 280px;
     max-width: 400px;
