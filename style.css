@@ -13,13 +13,6 @@
   }
 }
 
-/* New Styled Calendly Style */
-Calendly.initInlineWidget({
-  url: 'https://calendly.com/crownchemiststudio',
-  parentElement: document.getElementById('calendly-container'),
-  prefill: {},
-  utm: {}
-});
 
 /* Custom styled text link (not button) */
 .text-link {
