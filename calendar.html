@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style-calendar.css">
+  <title>Salon Booking</title>
+
+  <!-- Flatpickr Datepicker -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+</head>
+<body>
+  <div class="booking-container">
+    <h2>Book Your Appointment</h2>
+    
+    <form id="bookingForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+      <!-- Date Picker -->
+      <label for="date">Choose a Date</label>
+      <input type="text" id="date" name="date" placeholder="Select date" required>
+
+      <!-- Services -->
+      <label for="service" class="hidden">Select a Service</label>
+      <select id="service" name="service" class="hidden" required>
+        <option value="">-- Choose a Service --</option>
+        <option value="Haircut">Haircut</option>
+        <option value="Color">Color</option>
+        <option value="Nails">Nails</option>
+        <option value="Massage">Massage</option>
+      </select>
+
+      <!-- Time Slots -->
+      <div id="timeSlots" class="time-slots hidden"></div>
+      <input type="hidden" name="time" id="timeField" required>
+
+      <!-- Contact Info -->
+      <div id="contactFields" class="hidden">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="phone">Your Phone</label>
+        <input type="tel" id="phone" name="phone" required>
+        
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required>
+        
+        <button type="submit">Confirm Booking</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    // Init datepicker
+    flatpickr("#date", {
+      minDate: "today",
+      dateFormat: "Y-m-d",
+      onChange: function() {
+        document.querySelector("label[for='service']").classList.remove("hidden");
+        document.getElementById("service").classList.remove("hidden");
+      }
+    });
+
+    // When service selected, show times
+    const serviceSelect = document.getElementById("service");
+    const timeSlotsDiv = document.getElementById("timeSlots");
+    const timeField = document.getElementById("timeField");
+    const contactFields = document.getElementById("contactFields");
+
+    const serviceTimes = {
+      "Haircut": ["10:00 AM", "11:00 AM", "1:00 PM", "2:00 PM"],
+      "Color": ["9:30 AM", "12:00 PM", "3:00 PM"],
+      "Nails": ["10:15 AM", "11:45 AM", "2:15 PM"],
+      "Massage": ["9:00 AM", "11:00 AM", "1:30 PM", "4:00 PM"]
+    };
+
+    serviceSelect.addEventListener("change", function() {
+      timeSlotsDiv.innerHTML = "";
+      timeSlotsDiv.classList.remove("hidden");
+
+      const times = serviceTimes[this.value] || [];
+      times.forEach(t => {
+        const btn = document.createElement("div");
+        btn.classList.add("time-slot");
+        btn.textContent = t;
+        btn.onclick = () => {
+          document.querySelectorAll(".time-slot").forEach(el => el.classList.remove("selected"));
+          btn.classList.add("selected");
+          timeField.value = t;
+          contactFields.classList.remove("hidden");
+        };
+        timeSlotsDiv.appendChild(btn);
+      });
+    });
+  </script>
+</body>
+</html>
