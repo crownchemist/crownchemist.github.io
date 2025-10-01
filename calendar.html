@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="style-calendar.css">
   <title>Salon Booking</title>
 
@@ -11,11 +12,63 @@
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
 </head>
-<body>
+  <body>
+    <header>
+        <nav class="container">
+            <div class="logo" onclick="showPage('home')">
+                <img src="logoname-wide.png" alt="Crown Chemist" style="max-height: 50px; width: auto;">
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="https://crownchemist.github.io/index.html" onclick="showPage('home')" class="nav-link">Home</a></li>
+                <li><a href="https://crownchemist.github.io/services.html" onclick="showPage('services')" class="nav-link">Services</a></li>
+                <li><a href="https://crownchemist.github.io/portfolio.html" onclick="showPage('portfolio')" class="nav-link">Portfolio</a></li>
+                <li><a href="https://crownchemist.github.io/about.html" onclick="showPage('about')" class="nav-link">About</a></li>
+                <li><a href="https://crownchemist.github.io/contact.html" onclick="showPage('contact')" class="nav-link">Contact</a></li>
+                <li><a href="https://crownchemist.github.io/booking.html" onclick="showPage('booking')" class="nav-link book-btn-nav">Book Now</a></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+
+<div id="booking" class="page active">
+    <div class="container booking-content">
+        <h2 class="section-title">Book Your Transformation</h2>
+        <p class="section-subtitle">Your vision awaits</p>
+        
+        <div class="booking-steps">
+            <div class="booking-step">
+                <div class="step-number">1</div>
+                <h4>Choose Your Service</h4>
+                <p>Select from our many useful services or book a consultation to discuss your vision.</p>
+            </div>
+            
+            <div class="booking-step">
+                <div class="step-number">2</div>
+                <h4>Schedule Your Time</h4>
+                <p>Pick a date and time that works for your transformation journey.</p>
+            </div>
+            
+            <div class="booking-step">
+                <div class="step-number">3</div>
+                <h4>Consultation Call</h4>
+                <p>I'll contact you to discuss your goals and prepare for your appointment.</p>
+            </div>
+            
+            <div class="booking-step">
+                <div class="step-number">4</div>
+                <h4>Create Magic</h4>
+                <p>Experience the Crown Chemist difference as your vision becomes reality.</p>
+            </div>
+        </div>
   <div class="booking-container">
     <h2>Book Your Appointment</h2>
     
-    <form id="bookingForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+    <form id="bookingForm" action="https://formspree.io/f/mjkavdga" method="POST">
       <!-- Date Picker -->
       <label for="date">Choose a Date</label>
       <input type="text" id="date" name="date" placeholder="Select date" required>
@@ -49,49 +102,6 @@
       </div>
     </form>
   </div>
-
-  <script>
-    // Init datepicker
-    flatpickr("#date", {
-      minDate: "today",
-      dateFormat: "Y-m-d",
-      onChange: function() {
-        document.querySelector("label[for='service']").classList.remove("hidden");
-        document.getElementById("service").classList.remove("hidden");
-      }
-    });
-
-    // When service selected, show times
-    const serviceSelect = document.getElementById("service");
-    const timeSlotsDiv = document.getElementById("timeSlots");
-    const timeField = document.getElementById("timeField");
-    const contactFields = document.getElementById("contactFields");
-
-    const serviceTimes = {
-      "Haircut": ["10:00 AM", "11:00 AM", "1:00 PM", "2:00 PM"],
-      "Color": ["9:30 AM", "12:00 PM", "3:00 PM"],
-      "Nails": ["10:15 AM", "11:45 AM", "2:15 PM"],
-      "Massage": ["9:00 AM", "11:00 AM", "1:30 PM", "4:00 PM"]
-    };
-
-    serviceSelect.addEventListener("change", function() {
-      timeSlotsDiv.innerHTML = "";
-      timeSlotsDiv.classList.remove("hidden");
-
-      const times = serviceTimes[this.value] || [];
-      times.forEach(t => {
-        const btn = document.createElement("div");
-        btn.classList.add("time-slot");
-        btn.textContent = t;
-        btn.onclick = () => {
-          document.querySelectorAll(".time-slot").forEach(el => el.classList.remove("selected"));
-          btn.classList.add("selected");
-          timeField.value = t;
-          contactFields.classList.remove("hidden");
-        };
-        timeSlotsDiv.appendChild(btn);
-      });
-    });
-  </script>
+<script src="calendar.js"></script>
 </body>
 </html>
