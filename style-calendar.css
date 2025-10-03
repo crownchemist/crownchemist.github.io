@@ -9,7 +9,7 @@ padding: 20px;
 }
 */
 
-/* New Dark Theme Style */
+/* New Dark Theme Style 
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -17,12 +17,15 @@ body {
     background: var(--pure-black);
     overflow-x: hidden;
 }
+*/
 
-@media (min-width: 768px) {
+
+/* @media (min-width: 768px) {
 body {
 padding: 40px;
 }
 }
+*/
 
 .booking-container {
 background: #1e1e1e;
