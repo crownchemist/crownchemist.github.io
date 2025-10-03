@@ -1,0 +1,393 @@
+/* ===== MODERN BOOKING PAGE ===== */
+
+.booking-page {
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(138, 43, 226, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(106, 27, 154, 0.1) 0%, transparent 50%),
+        #000000;
+    min-height: 100vh;
+    padding-top: 100px;
+}
+
+/* ===== COMPACT HERO ===== */
+.booking-hero {
+    text-align: center;
+    padding: 2rem 0 1rem;
+    margin-bottom: 2rem;
+}
+
+.booking-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--pure-white);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #ffffff, #B347D9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.booking-hero p {
+    color: var(--off-white);
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* ===== MODERN STEP PROGRESS ===== */
+.booking-progress {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    padding: 0 20px;
+}
+
+.progress-track {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 1.5rem 0;
+}
+
+.progress-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: rgba(138, 43, 226, 0.2);
+    z-index: 0;
+}
+
+.progress-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #8A2BE2, #B347D9);
+    transition: width 0.5s ease;
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+}
+
+.progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 1;
+    flex: 1;
+}
+
+.step-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(28, 28, 28, 0.9);
+    border: 2px solid rgba(138, 43, 226, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.progress-step.active .step-circle {
+    background: linear-gradient(135deg, #8A2BE2, #B347D9);
+    border-color: #B347D9;
+    color: #ffffff;
+    box-shadow: 0 0 25px rgba(138, 43, 226, 0.6);
+    transform: scale(1.1);
+}
+
+.progress-step.completed .step-circle {
+    background: rgba(138, 43, 226, 0.5);
+    border-color: #8A2BE2;
+    color: #ffffff;
+}
+
+.step-label {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.progress-step.active .step-label {
+    color: #B347D9;
+}
+
+/* ===== GLASS-MORPHISM FORM CONTAINER ===== */
+.booking-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px 4rem;
+}
+
+.form-card {
+    background: rgba(28, 28, 28, 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(138, 43, 226, 0.2);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        0 0 60px rgba(138, 43, 226, 0.1);
+}
+
+/* ===== FORM ELEMENTS ===== */
+.form-section {
+    margin-bottom: 2rem;
+}
+
+.form-section:last-child {
+    margin-bottom: 0;
+}
+
+.form-label {
+    display: block;
+    color: var(--pure-white);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-input,
+.form-select {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(10, 10, 10, 0.8);
+    border: 2px solid rgba(138, 43, 226, 0.3);
+    border-radius: 12px;
+    color: var(--pure-white);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus,
+.form-select:focus {
+    outline: none;
+    border-color: #B347D9;
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
+    background: rgba(10, 10, 10, 0.95);
+}
+
+.form-input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* ===== TIME SLOTS GRID ===== */
+.time-slots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+}
+
+.time-slot-btn {
+    padding: 1rem;
+    background: rgba(10, 10, 10, 0.6);
+    border: 2px solid rgba(138, 43, 226, 0.3);
+    border-radius: 12px;
+    color: var(--pure-white);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.time-slot-btn:hover {
+    border-color: #B347D9;
+    background: rgba(138, 43, 226, 0.2);
+    transform: translateY(-2px);
+}
+
+.time-slot-btn.selected {
+    background: linear-gradient(135deg, #8A2BE2, #B347D9);
+    border-color: #B347D9;
+    box-shadow: 0 4px 20px rgba(138, 43, 226, 0.4);
+}
+
+/* ===== ACTION BUTTONS ===== */
+.btn-booking {
+    width: 100%;
+    padding: 1.2rem;
+    background: linear-gradient(135deg, #8A2BE2, #B347D9);
+    border: none;
+    border-radius: 12px;
+    color: var(--pure-white);
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(138, 43, 226, 0.4);
+}
+
+.btn-booking:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 30px rgba(138, 43, 226, 0.6);
+}
+
+.btn-booking:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #8A2BE2;
+    box-shadow: none;
+}
+
+.btn-outline:hover {
+    background: rgba(138, 43, 226, 0.1);
+}
+
+/* ===== ADDITIONAL SERVICE CARD ===== */
+.additional-service-item {
+    background: rgba(10, 10, 10, 0.4);
+    border: 1px solid rgba(138, 43, 226, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.remove-service-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    color: #ff6b6b;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.25rem;
+    line-height: 1;
+    transition: all 0.2s ease;
+}
+
+.remove-service-icon:hover {
+    color: #ff4444;
+    transform: scale(1.2);
+}
+
+/* ===== UTILITY CLASSES ===== */
+.hidden {
+    display: none !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-2 {
+    margin-top: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 1rem;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .booking-page {
+        padding-top: 120px;
+    }
+
+    .booking-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .progress-track {
+        padding: 1rem 0;
+    }
+    
+    .step-circle {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .step-label {
+        font-size: 0.65rem;
+    }
+    
+    .form-card {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+    
+    .time-slots-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 0.5rem;
+    }
+    
+    .time-slot-btn {
+        padding: 0.85rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* ===== FLATPICKR THEME OVERRIDE ===== */
+.flatpickr-calendar {
+    background: rgba(28, 28, 28, 0.95) !important;
+    border: 1px solid rgba(138, 43, 226, 0.3) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6) !important;
+}
+
+.flatpickr-day.selected {
+    background: linear-gradient(135deg, #8A2BE2, #B347D9) !important;
+    border-color: #B347D9 !important;
+}
+
+.flatpickr-day:hover {
+    background: rgba(138, 43, 226, 0.3) !important;
+}
+
+.flatpickr-months {
+    background: rgba(28, 28, 28, 0.95) !important;
+}
+
+.flatpickr-current-month {
+    color: var(--pure-white) !important;
+}
+
+.flatpickr-weekdays {
+    background: rgba(28, 28, 28, 0.95) !important;
+}
+
+.flatpickr-weekday {
+    color: var(--vibrant-purple-neon) !important;
+}
+
+.flatpickr-day {
+    color: var(--pure-white) !important;
+}
+
+.flatpickr-day.disabled {
+    color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* ===== OLD BOOKING CONTAINER (LEGACY - REMOVE IF NOT NEEDED) ===== 
+.booking-container {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 420px;
+    width: 100%;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    margin: 0 auto;
+}
+*/
+
