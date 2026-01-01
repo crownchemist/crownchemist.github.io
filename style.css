@@ -397,6 +397,10 @@
             margin-bottom: 2rem;
             color: var(--off-white);
         }
+        .about-content img {
+            max-width: 100%;
+            height: auto;
+        }
 
         /* Contact Section */
         .contact-grid {
@@ -642,4 +646,5 @@
         .success-message.show {
             display: block;
         }
+
 
