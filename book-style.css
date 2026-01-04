@@ -505,6 +505,8 @@
         /* Booking Section */
         .booking-content {
             padding: 4rem 0 6rem 0;
+            display: flex;
+            flex-direction: column;
         }
 
         /* Booking Steps Container */
@@ -592,10 +594,13 @@
   .booking-step p {
     font-size: 0.78rem;
     opacity: 0.8;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    line-height: 1.4;
+
+    /* allow full wrapping */
+    display: block;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
   }
 }
 
