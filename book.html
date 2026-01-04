@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="book-style.css">
+<link rel="stylesheet" href="book-calendar.css">
+<title>Salon Booking</title>
+
+<!-- Flatpickr Datepicker -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+</head>
+<body>
+<header>
+<nav class="container">
+<div class="logo" onclick="showPage('home')">
+<img src="logoname-wide.png" alt="Crown Chemist" style="max-height: 50px; width: auto;">
+</div>
+<ul class="nav-links" id="navLinks">
+<li><a href="https://crownchemist.github.io/index.html" onclick="showPage('home')" class="nav-link">Home</a></li>
+<li><a href="https://crownchemist.github.io/services.html" onclick="showPage('services')" class="nav-link">Services</a></li>
+<li><a href="https://crownchemist.github.io/portfolio.html" onclick="showPage('portfolio')" class="nav-link">Portfolio</a></li>
+<li><a href="https://crownchemist.github.io/about.html" onclick="showPage('about')" class="nav-link">About</a></li>
+<li><a href="https://crownchemist.github.io/contact.html" onclick="showPage('contact')" class="nav-link">Contact</a></li>
+<li><a href="https://crownchemist.github.io/booking.html" onclick="showPage('booking')" class="nav-link book-btn-nav">Book Now</a></li>
+</ul>
+<div class="mobile-menu" onclick="toggleMobileMenu()">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</nav>
+</header>
+
+
+<div id="booking" class="page active">
+<div class="container booking-content">
+<h2 class="section-title">Book Your Transformation</h2>
+<p class="section-subtitle">Your vision awaits</p>
+<div class="booking-steps">
+<div class="booking-step">
+<div class="step-number">1</div>
+<div class="step-text">
+<h4>Choose Your Schedule</h4>
+<p>Pick a date that works for you between Thurs-Sun.</p>
+</div>
+</div>
+<div class="booking-step">
+<div class="step-number">2</div>
+<div class="step-text">
+<h4>Select Your Service</h4>
+<p>Select from our services or book a consultation to discuss your vision.</p>
+</div>
+</div>
+<div class="booking-step">
+<div class="step-number">3</div>
+<div class="step-text">
+<h4>Choose Your Time</h4>
+<p>Timeslots will be displayed based on the date and the estimated duration.</p>
+</div>
+</div>
+<div class="booking-step">
+<div class="step-number">4</div>
+<div class="step-text">
+<h4>Confirmation</h4>
+<p>You'll receive confirmation of your booking! You may be contacted to discuss specific goals.</p>
+</div>
+</div>
+</div>
+
+<div class="booking-container">
+<h2>Book Your Appointment</h2>
+<form id="bookingForm" action="https://formspree.io/f/mjkavdga" method="POST">
+<!-- Date Picker -->
+<label for="date">Choose a Date</label>
+<input type="text" id="date" name="date" placeholder="Select date" required>
+
+<!-- Main Service Category -->
+<label for="service" class="hidden">Select Service Category</label>
+<select id="service" name="service_category" class="hidden" required>
+<option value="">-- Choose a Service Category --</option>
+<option value="Color Services">Color Services</option>
+<option value="Cutting & Styling">Cutting & Styling</option>
+<option value="Specialty Services">Specialty Services</option>
+</select>
+
+<!-- Sub-Service Selection -->
+<label for="subService" class="hidden">Select Specific Service</label>
+<select id="subService" name="service" class="hidden" required>
+<option value="">-- Choose Specific Service --</option>
+</select>
+
+<!-- Time Slots -->
+<div id="timeSlots" class="time-slots hidden"></div>
+<input type="hidden" name="time" id="timeField" required>
+
+<!-- Add Another Service Button -->
+<div id="addServiceButtonContainer" class="hidden">
+<button type="button" id="addServiceBtn" class="add-service-btn">➕ Add Another Service</button>
+</div>
+
+<!-- Additional Services Container -->
+<div id="additionalServicesContainer"></div>
+
+<!-- Contact Info -->
+<div id="contactFields" class="hidden">
+<label for="name">Your Name</label>
+<input type="text" id="name" name="name" required>
+<label for="phone">Your Phone</label>
+<input type="tel" id="phone" name="phone" required>
+<label for="email">Your Email</label>
+<input type="email" id="email" name="email" required>
+<button type="submit">Confirm Booking</button>
+</div>
+</form>
+</div>
+</div>
+<script src="script.js"></script>
+<script src="calendar.js"></script>
+</body>
+</html>
