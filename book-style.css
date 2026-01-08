@@ -534,6 +534,56 @@ nav {
     margin-bottom: 3rem;
 }
 
+/* Collapsible behavior for booking steps */
+.booking-steps {
+    /* allow animated open/close via max-height */
+    max-height: 1200px;
+    overflow: visible;
+    transition: max-height 0.4s ease, opacity 0.3s ease, margin-bottom 0.3s ease;
+}
+
+.booking-steps.collapsed {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Toggle link placed below the hero */
+/* Small themed toggle button that matches booking form */
+.btn-toggle,
+#toggleSteps.btn-toggle {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0.5rem 0.8rem;
+    background: linear-gradient(135deg, #8A2BE2, #B347D9);
+    color: var(--pure-white);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    box-shadow: 0 4px 18px rgba(138,43,226,0.35);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+}
+
+.btn-toggle:hover,
+.btn-toggle:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 26px rgba(138,43,226,0.45);
+    outline: none;
+}
+
+.btn-toggle.btn-outline {
+    background: transparent;
+    border: 2px solid #8A2BE2;
+    color: var(--pure-white);
+    box-shadow: none;
+}
+
 /* Each step becomes a card */
 .booking-step {
     flex: 1;

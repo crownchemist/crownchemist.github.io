@@ -279,3 +279,31 @@ function removeAdditionalService(id) {
     serviceCard.remove();
   }
 }
+
+// Toggle booking steps show/hide (accessible)
+document.addEventListener('DOMContentLoaded', function() {
+  const toggle = document.getElementById('toggleSteps');
+  const steps = document.getElementById('bookingSteps');
+  if (!toggle || !steps) return;
+
+  // Initialize text based on current state
+  if (steps.classList.contains('collapsed')) {
+    toggle.textContent = 'Show More Info';
+    toggle.setAttribute('aria-expanded', 'false');
+  } else {
+    toggle.textContent = 'Hide Info';
+    toggle.setAttribute('aria-expanded', 'true');
+  }
+
+  toggle.addEventListener('click', function(e) {
+    e.preventDefault();
+    const collapsed = steps.classList.toggle('collapsed');
+    if (collapsed) {
+      toggle.textContent = 'Show More Info';
+      toggle.setAttribute('aria-expanded', 'false');
+    } else {
+      toggle.textContent = 'Hide Info';
+      toggle.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
