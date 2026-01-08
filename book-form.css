@@ -146,6 +146,48 @@
     color: rgba(255, 255, 255, 0.3);
 }
 
+/* Preferred Contact fieldset styling (match form visuals, remove default white border) */
+.form-fieldset {
+    margin-top: 0.8rem;
+    padding: 0.9rem 1rem;
+    background: rgba(10, 10, 10, 0.6);
+    border: 2px solid rgba(138, 43, 226, 0.3);
+    border-radius: 12px;
+}
+
+.form-fieldset .form-label,
+.form-fieldset legend {
+    margin: 0;
+    padding: 0;
+    color: var(--pure-white);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.radio-group label {
+    color: var(--pure-white);
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.radio-group input[type="radio"] {
+    accent-color: #8A2BE2;
+    width: 1rem;
+    height: 1rem;
+}
+
 /* ===== TIME SLOTS GRID ===== */
 .time-slots-grid {
     display: grid;

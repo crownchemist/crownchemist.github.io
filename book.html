@@ -170,7 +170,22 @@
                             <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com"
                                 required>
 
-                            <button type="submit" class="btn-booking mt-2">Confirm Booking ✨</button>
+                            <fieldset class="form-fieldset" id="preferredContactFieldset" style="margin-top:0.8rem;">
+                                <legend class="form-label" style="margin-bottom:0.4rem;">Preferred Contact</legend>
+                                <div class="radio-group">
+                                    <label style="margin-right:1rem;">
+                                        <input type="radio" name="preferred_contact" value="Text"> Text
+                                    </label>
+                                    <label style="margin-right:1rem;">
+                                        <input type="radio" name="preferred_contact" value="E-mail"> E-mail
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="preferred_contact" value="Call"> Call
+                                    </label>
+                                </div>
+                            </fieldset>
+
+                            <button type="submit" class="btn-booking mt-2">Request Booking ✨</button>
                         </div>
                     </form>
                 </div>
