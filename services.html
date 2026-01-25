@@ -1,15 +1,18 @@
 <!-- SERVICES PAGE -->
- <!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="book-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <title>Crown Chemist | Services</title>
-    
+
 </head>
+
 <body>
     <header>
         <nav class="container">
@@ -17,12 +20,18 @@
                 <img src="logoname-wide.png" alt="Crown Chemist" style="max-height: 50px; width: auto;">
             </div>
             <ul class="nav-links" id="navLinks">
-                <li><a href="https://crownchemist.github.io/index.html" onclick="showPage('home')" class="nav-link">Home</a></li>
-                <li><a href="https://crownchemist.github.io/services.html" onclick="showPage('services')" class="nav-link">Services</a></li>
-                <li><a href="https://crownchemist.github.io/portfolio.html" onclick="showPage('portfolio')" class="nav-link">Portfolio</a></li>
-                <li><a href="https://crownchemist.github.io/about.html" onclick="showPage('about')" class="nav-link">About</a></li>
-                <li><a href="https://crownchemist.github.io/contact.html" onclick="showPage('contact')" class="nav-link">Contact</a></li>
-                <li><a href="https://crownchemist.github.io/book.html" onclick="showPage('booking')" class="nav-link book-btn-nav">Book Now</a></li>
+                <li><a href="https://crownchemist.github.io/index.html" onclick="showPage('home')"
+                        class="nav-link">Home</a></li>
+                <li><a href="https://crownchemist.github.io/services.html" onclick="showPage('services')"
+                        class="nav-link">Services</a></li>
+                <li><a href="https://crownchemist.github.io/portfolio.html" onclick="showPage('portfolio')"
+                        class="nav-link">Portfolio</a></li>
+                <li><a href="https://crownchemist.github.io/about.html" onclick="showPage('about')"
+                        class="nav-link">About</a></li>
+                <li><a href="https://crownchemist.github.io/contact.html" onclick="showPage('contact')"
+                        class="nav-link">Contact</a></li>
+                <li><a href="https://crownchemist.github.io/book.html" onclick="showPage('booking')"
+                        class="nav-link book-btn-nav">Book Now</a></li>
             </ul>
             <div class="mobile-menu" onclick="toggleMobileMenu()">
                 <span></span>
@@ -31,62 +40,213 @@
             </div>
         </nav>
     </header>
-<div id="services" class="page active booking-page">
-    <div class="container services-content">
-        <div class="booking-hero">
-        <h1>Precision & Power</h1>
-        <p>Where contrast creates magic</p>
-        </div>
-        
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">⚗️</div>
-                <h3>Color Mathematics</h3>
-                <div class="price">Starting at $150</div>
-                <p>Scientific precision meets artistic vision. Advanced formulation techniques that achieve perfect saturation and impossible gradients with mathematical accuracy.</p>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">🎨</div>
-                <h3>Fantasy Realization</h3>
-                <div class="price">Starting at $200</div>
-                <p>Vibrant purples, electric blues, pure whites. Every fantasy color brought to vivid life with intensity that defies natural law.</p>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">💎</div>
-                <h3>Precision Carved Art</h3>
-                <div class="price">Starting at $80</div>
-                <p>Geometric perfection etched with surgical precision. Clean lines and bold patterns that showcase technical mastery and artistic vision.</p>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">⚡</div>
-                <h3>Bold Statement Styling</h3>
-                <div class="price">Starting at $120</div>
-                <p>High-contrast looks that command absolute attention. For those who refuse compromise and demand perfection in their rebellion.</p>
+    <div id="services" class="page active booking-page">
+        <div class="container services-content">
+            <div class="booking-hero">
+                <h1>Precision & Power</h1>
+                <p>Where contrast creates magic</p>
             </div>
 
-            <div class="service-card">
-                <div class="service-icon">🔬</div>
-                <h3>Color Correction</h3>
-                <div class="price">Starting at $180</div>
-                <p>Advanced correction techniques to fix previous work and achieve your dream color. No challenge too complex for our expertise.</p>
-            </div>
+            <!--STICKY SUB NAV-->
 
-            <div class="service-card">
-                <div class="service-icon">✨</div>
-                <h3>Full Transformation</h3>
-                <div class="price">Starting at $350</div>
-                <p>Complete makeover including cut, color, and styling. The ultimate Crown Chemist experience for total reinvention.</p>
-            </div>
-        </div>
+            <nav class="services-subnav">
+                <a href="#hair-cuts">Hair Cuts</a>
+                <a href="#color-services">Color Services</a>
+                <a href="#styling-treatments">Styling & Treatments</a>
+            </nav>
+            
+            <!--HAIR CUTS-->
 
-        <div style="text-align: center; margin-top: 4rem;">
-            <button class="btn btn-primary" onclick="showPage('booking')">Book Your Service</button>
+            <section id="hair-cuts" class="service-category">
+                <div class="service-category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-scissors"></i>
+                    </div>
+
+                    <div class="category-content">
+                        <h2>Hair Cuts</h2>
+                        <p>Precision cuts, lived-in layers, edgy designs & refined classics.</p>
+                    </div>
+                </div>
+
+                <div class="service-list">
+
+                    <div class="service-item">
+                        <div class="service-header">
+                            <h3>Women's Haircut</h3>
+                            <span class="price">$35+</span>
+                        </div>
+                        <p>Customized cut with consultation, wash, and style. Ready to switch up your look? Our haircuts are all about giving you the fresh, on-point style you’ve been craving. </p>
+                        <a href="/booking.html" class="book-btn">Book</a>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-header">
+                            <h3>Men's Haircut</h3>
+                            <span class="price">$25+</span>
+                        </div>
+                        <p>Customized cut with consultation, wash, and style. From tailored looks and quick trims to clean fades and modern styles, we’ll get you looking sharp.</p>
+                        <a href="/booking.html" class="book-btn">Book</a>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-header">
+                            <h3>Kid's Haircut (12 & Under)</h3>
+                            <span class="price">$15+</span>
+                        </div>
+                        <p>Customized cut with consultation, wash, and style.</p>
+                        <a href="/booking.html" class="book-btn">Book</a>
+                    </div>
+
+                </div>
+
+                <!-- Mens Shave Etc-->
+
+                <section id="mens-services" class="service-category">
+                    <div class="service-category-card">
+                        <div class="category-icon">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+
+                        <div class="category-content">
+                            <h2>Shave & Grooming</h2>
+                            <p>Classic shaves, tailored trims, and precision grooming.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-list">
+
+                        <div class="service-item">
+                            <div class="service-header">
+                                <h3>Classic Men's Shave</h3>
+                                <span class="price">$25+</span>
+                            </div>
+                            <p>Full face shave with lather and finish.</p>
+                            <a href="/booking.html" class="book-btn">Book</a>
+                        </div>
+
+                        <div class="service-item">
+                            <div class="service-header">
+                                <h3>Mustache & Beard Trim</h3>
+                                <span class="price">$10+</span>
+                            </div>
+                            <p>Keep your beard and mustache looking fresh with a quick trim. Whether you need a little shape or a clean-up, we’ve got you covered. Shave additional + $7</p>
+                            <a href="/booking.html" class="book-btn">Book</a>
+                        </div>
+
+                    </div>
+
+                    <!-- Color Services Section -->
+
+                    <section id="color-services" class="service-category">
+                        <div class="service-category-card">
+                            <div class="category-icon">
+                                <i class="fa-solid fa-palette"></i>
+                            </div>
+
+                            <div class="category-content">
+                                <h2>Color Services</h2>
+                                <p>Classic luxury styles to transformative fantasy hues.</p>
+                            </div>
+                        </div>
+
+                        <div class="service-list">
+
+                            <div class="service-item">
+                                <div class="service-header">
+                                    <h3>Root Re-Color</h3>
+                                    <span class="price">$65+</span>
+                                </div>
+                                <p>Refresh your look with our root coverage service, where we expertly retouch root
+                                    grow-out with a single color application. </p>
+                                <a href="/booking.html" class="book-btn">Book</a>
+                            </div>
+
+                            <div class="service-item">
+                                <div class="service-header">
+                                    <h3>Root Re-Highlight: Retouch Service</h3>
+                                    <span class="price">$75+</span>
+                                </div>
+                                <p>Fix the highlighted root grow-out seamlessly with a versatile style that's easy to
+                                    maintain. We retouch grays or new hair growth to bring your look back to life.</p>
+                                <a href="/booking.html" class="book-btn">Book</a>
+                            </div>
+
+                            <div class="service-item">
+                                <div class="service-header">
+                                    <h3>Partial Highlight</h3>
+                                    <span class="price">$95+</span>
+                                </div>
+                                <p>If you're after a more subtle, natural look, partial highlights are for you. We focus
+                                    on specific sections—like around your face or the top layers—giving you just the
+                                    right amount of lightness and dimension.</p>
+                                <a href="/booking.html" class="book-btn">Book</a>
+                            </div>
+
+                            <div class="service-item">
+                                <div class="service-header">
+                                    <h3>Full Highlight</h3>
+                                    <span class="price">$150+</span>
+                                </div>
+                                <p>For a complete transformation, full highlights give your hair an all-over glow. We
+                                    lighten sections throughout your entire head, creating a vibrant, sun-kissed look
+                                    from root to tip.</p>
+                                <a href="/booking.html" class="book-btn">Book</a>
+                            </div>
+
+                                                        <div class="service-item">
+                                <div class="service-header">
+                                    <h3>Balyage</h3>
+                                    <span class="price">$195+</span>
+                                </div>
+                                <p>Want that natural, sun-kissed look without the high maintenance? Our balayage service gives you soft, hand-painted highlights that grow out beautifully and blend like a dream. It’s perfect for adding dimension and a little glow-up to your hair—totally customized.</p>
+                                <a href="/booking.html" class="book-btn">Book</a>
+                            </div>
+
+                                                        <div class="service-item">
+                                <div class="service-header">
+                                    <h3>Full Color</h3>
+                                    <span class="price">$ Variable - Contact for details</span>
+                                </div>
+                                <p>If you’re rockin’ a crown of color that has lost its vibrancy, or maybe you’re ready for a full reset, the transformative power of a color service is designed to enhance your natural beauty and confidence. Prices depend on color choice & additional applications--all discussed in your free consultation.</p>
+                                <a href="/booking.html" class="book-btn">Book</a>
+                            </div>
+
+                                                        <div class="service-item">
+                                <div class="service-header">
+                                    <h3>Blonde ombré</h3>
+                                    <span class="price">$ Variable - Contact for details</span>
+                                </div>
+                                <p>This Ombré service gives you a stunning transition from darker roots to lighter blonde ends, creating a soft, blended look that’s low-maintenance but high-impact.</p>
+                                <a href="/booking.html" class="book-btn">Book</a>
+                            </div>
+
+                                                        <div class="service-item">
+                                <div class="service-header">
+                                    <h3>Color Ombre</h3>
+                                    <span class="price">$ Variable - Contact for details</span>
+                                </div>
+                                <p>Ready for a bold, gradient effect with a fun color? This Color Ombré service gives you a stunning transition from dark roots to dreamy colored ends.</p>
+                                <a href="/booking.html" class="book-btn">Book</a>
+                            </div>
+
+                                                        <div class="service-item">
+                                <div class="service-header">
+                                    <h3>Expressive Color Blocking</h3>
+                                    <span class="price">$85</span>
+                                </div>
+                                <p>Whether you’re looking for a subtle pop of color, or a daring statement, we tailor the experience to fit your style. For additional colors and applications - $15/ea</p>
+                                <a href="/booking.html" class="book-btn">Book</a>
+                            </div>
+
+                        </div>
+
+                        <div style="text-align: center; margin-top: 4rem;">
+                            <button class="btn btn-primary" onclick="showPage('booking')">Book Your Service</button>
+                        </div>
         </div>
     </div>
-</div>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
