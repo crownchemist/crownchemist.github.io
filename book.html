@@ -108,86 +108,151 @@
                     </div>
                 </div>
             </div>
-            <!-- Booking Form -->
-            <div class="booking-form-container">
-                <div class="form-card">
-                    <form id="bookingForm" action="https://formspree.io/f/mjkavdga" method="POST">
+<!-- Booking Form -->
+<div class="booking-form-container">
+  <div class="form-card">
 
-                        <!-- Step 1: Date Selection -->
-                        <div class="form-section" id="dateSection">
-                            <label class="form-label">Select Your Date</label>
-                            <input type="text" id="date" name="date" class="form-input" placeholder="Choose a date"
-                                required>
-                        </div>
+    <form
+      id="bookingForm"
+      action="https://formsubmit.co/crownchemiststudio@gmail.com"
+      method="POST"
+    >
 
-                        <!-- Step 2: Service Category -->
-                        <div class="form-section hidden" id="categorySection">
-                            <label class="form-label">Service Category</label>
-                            <select id="service" name="service_category" class="form-select" required>
-                                <option value="">Choose a category</option>
-                                <option value="Color Services">Color Services</option>
-                                <option value="Cutting & Styling">Cutting & Styling</option>
-                                <option value="Specialty Services">Specialty Services</option>
-                            </select>
-                        </div>
+      <!-- FormSubmit config -->
+      <input type="hidden" name="_subject" value="New Booking Request – Crown Chemist">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://crownchemist.github.io/thanks.html">
+      
 
-                        <!-- Step 2.5: Specific Service -->
-                        <div class="form-section hidden" id="serviceSection">
-                            <label class="form-label">Specific Service</label>
-                            <select id="subService" name="service" class="form-select" required>
-                                <option value="">Choose your service</option>
-                            </select>
-                        </div>
+      <!-- Step 1: Date Selection -->
+      <div class="form-section" id="dateSection">
+        <label class="form-label">Select Your Date</label>
+        <input
+          type="text"
+          id="date"
+          name="date"
+          class="form-input"
+          placeholder="Choose a date"
+          required
+        >
+      </div>
 
-                        <!-- Step 3: Time Selection -->
-                        <div class="form-section hidden" id="timeSection">
-                            <label class="form-label">Available Times</label>
-                            <div id="timeSlots" class="time-slots-grid"></div>
-                            <input type="hidden" name="time" id="timeField" required>
-                        </div>
+      <!-- Step 2: Service Category -->
+      <div class="form-section hidden" id="categorySection">
+        <label class="form-label">Service Category</label>
+        <select
+          id="service"
+          name="service_category"
+          class="form-select"
+          required
+        >
+          <option value="">Choose a category</option>
+          <option value="Color Services">Color Services</option>
+          <option value="Cutting & Styling">Cutting & Styling</option>
+          <option value="Specialty Services">Specialty Services</option>
+        </select>
+      </div>
 
-                        <!-- Add Another Service -->
-                        <div class="form-section hidden" id="addServiceSection">
-                            <button type="button" id="addServiceBtn" class="btn-booking btn-outline">
-                                ➕ Add Another Service
-                            </button>
-                        </div>
+      <!-- Step 2.5: Specific Service -->
+      <div class="form-section hidden" id="serviceSection">
+        <label class="form-label">Specific Service</label>
+        <select
+          id="subService"
+          name="service"
+          class="form-select"
+          required
+        >
+          <option value="">Choose your service</option>
+        </select>
+      </div>
 
-                        <!-- Additional Services Container -->
-                        <div id="additionalServicesContainer"></div>
+      <!-- Step 3: Time Selection -->
+      <div class="form-section hidden" id="timeSection">
+        <label class="form-label">Available Times</label>
+        <div id="timeSlots" class="time-slots-grid"></div>
+        <input type="hidden" name="time" id="timeField" required>
+      </div>
 
-                        <!-- Step 4: Contact Information -->
-                        <div class="form-section hidden" id="contactSection">
-                            <label class="form-label">Your Name</label>
-                            <input type="text" id="name" name="name" class="form-input" placeholder="Enter your name"
-                                required>
+      <!-- Add Another Service -->
+      <div class="form-section hidden" id="addServiceSection">
+        <button
+          type="button"
+          id="addServiceBtn"
+          class="btn-booking btn-outline"
+        >
+          ➕ Add Another Service
+        </button>
+      </div>
 
-                            <label class="form-label mt-2">Your Phone</label>
-                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="(555) 123-4567"
-                                required>
+      <!-- Additional Services Container -->
+      <div id="additionalServicesContainer"></div>
 
-                            <label class="form-label mt-2">Your Email</label>
-                            <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com"
-                                required>
+      <!-- Step 4: Contact Information -->
+      <div class="form-section hidden" id="contactSection">
 
-                            <fieldset class="form-fieldset" id="preferredContactFieldset" style="margin-top:0.8rem;">
-                                <legend class="form-label" style="margin-bottom:0.4rem;">Preferred Contact</legend>
-                                <div class="radio-group">
-                                    <label style="margin-right:1rem;">
-                                        <input type="radio" name="preferred_contact" value="Text"> Text
-                                    </label>
-                                    <label style="margin-right:1rem;">
-                                        <input type="radio" name="preferred_contact" value="E-mail"> Email
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="preferred_contact" value="Call"> Call
-                                    </label>
-                                </div>
-                            </fieldset>
+        <label class="form-label">Your Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          class="form-input"
+          placeholder="Enter your name"
+          required
+        >
 
-                            <button type="submit" class="btn-booking mt-2">Request Booking ✨</button>
-                        </div>
-                    </form>
+        <label class="form-label mt-2">Your Phone</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          class="form-input"
+          placeholder="(555) 123-4567"
+          required
+        >
+
+        <label class="form-label mt-2">Your Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="form-input"
+          placeholder="you@example.com"
+          required
+        >
+
+        <fieldset
+          class="form-fieldset"
+          id="preferredContactFieldset"
+          style="margin-top:0.8rem;"
+        >
+          <legend class="form-label" style="margin-bottom:0.4rem;">
+            Preferred Contact
+          </legend>
+
+          <div class="radio-group">
+            <label style="margin-right:1rem;">
+              <input type="radio" name="preferred_contact" value="Text"> Text
+            </label>
+            <label style="margin-right:1rem;">
+              <input type="radio" name="preferred_contact" value="Email"> Email
+            </label>
+            <label>
+              <input type="radio" name="preferred_contact" value="Call"> Call
+            </label>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn-booking mt-2">
+          Request Booking ✨
+        </button>
+
+      </div>
+    </form>
+
+  </div>
+</div>
+
                 </div>
             </div>
         </div>
