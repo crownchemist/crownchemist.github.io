@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="book-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Bakbak+One&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Grape+Nuts&family=Lato:wght@300;400;700&family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Pen+Script&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@100;300;400;500;600;700&family=Reenie+Beanie&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rock+Salt&family=Special+Elite&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
     <title>Crown Chemist | Services</title>
 
 </head>
@@ -40,10 +45,11 @@
             </div>
         </nav>
     </header>
-        <div id="services" class="page active">
+    <div id="services" class="page active">
         <div class="container services-content">
-            <h2 class="section-title">Services</h2>
-            <p class="section-subtitle">Where contrast creates magic</p>
+            <div class="booking-hero">
+                <h1>Services</h1>
+            </div>
 
             <nav class="services-subnav">
                 <a href="#hair-cuts">Hair Cuts</a>
@@ -60,7 +66,6 @@
 
                     <div class="category-content">
                         <h2>Hair Cuts</h2>
-                        <p>Precision cuts, lived-in layers, edgy designs & refined classics.</p>
                     </div>
                 </div>
 
@@ -68,26 +73,39 @@
 
                     <div class="service-item">
                         <div class="service-header">
-                            <h3>Women's Haircut</h3>
-                            <span class="price">$35+</span>
+                            <h3>Essential Cut</h3>
+                            <span class="price">$40</span>
                         </div>
-                        <p>Customized cut with consultation, wash, and style. Ready to switch up your look? Our haircuts are all about giving you the fresh, on-point style you’ve been craving.</p>
+                        <p>Customized cut with consultation, wash, and style. Ready to switch up your look? Our haircuts
+                            are all about giving you the fresh, on-point style you’ve been craving.</p>
                         <a href="/book.html" class="book-btn">Book</a>
                     </div>
 
                     <div class="service-item">
                         <div class="service-header">
-                            <h3>Men's Haircut</h3>
-                            <span class="price">$25+</span>
+                            <h3>Specialty Cut</h3>
+                            <span class="price">$50</span>
                         </div>
-                        <p>Customized cut with consultation, wash, and style. From tailored trims to clean fades & modern styles, we’ll get you looking sharp.</p>
+                        <p>Customized cut with consultation, wash, and style. From tailored trims to clean fades &
+                            modern styles, we’ll get you looking sharp.</p>
+                        <a href="/book.html" class="book-btn">Book</a>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-header">
+                            <h3>Custom Hair Tattoo</h3>
+                            <span class="price">Hourly rate $45/hr. Prices depend on size and detail.</span>
+                        </div>
+                        <p>Make your cut a canvas. Our custom shaved hair designs include a haircut & a fresh creative
+                            detail. From geometric patterns to freestyle artwork, we’ll bring your vision to life with
+                            precision and style. Consultation included to establish artwork size and intricacy</p>
                         <a href="/book.html" class="book-btn">Book</a>
                     </div>
 
                     <div class="service-item">
                         <div class="service-header">
                             <h3>Kid's Haircut (12 & Under)</h3>
-                            <span class="price">$15+</span>
+                            <span class="price">$25</span>
                         </div>
                         <p>Customized cut with consultation, wash, and style.</p>
                         <a href="/book.html" class="book-btn">Book</a>
@@ -97,7 +115,7 @@
             </section>
 
             <!-- Mens Shave Etc-->
-
+            <!--
             <section id="shave-services" class="service-category">
                 <div class="service-category-card">
                     <div class="category-icon">
@@ -106,7 +124,6 @@
 
                     <div class="category-content">
                         <h2>Shaves & Grooming</h2>
-                        <p>Classic shaves, tailored trims, and precision grooming.</p>
                     </div>
                 </div>
 
@@ -126,22 +143,14 @@
                             <h3>Mustache & Beard Trim</h3>
                             <span class="price">$10+</span>
                         </div>
-                        <p>Whether you need a little shape or a clean-up, we’ve got you covered. Shave additional + $7</p>
+                        <p>Whether you need a little shape or a clean-up, we’ve got you covered. Shave additional + $7
+                        </p>
                         <a href="/book.html" class="book-btn">Book</a>
                     </div>
 
-                    <div class="service-item">
-                        <div class="service-header">
-                            <h3>Custom Hair Tattoo</h3>
-                            <span class="price">$ Variable - Contact for details</span>
-                        </div>
-                        <p>Make your cut a canvas. From geometric patterns to freestyle artwork, we’ll bring your vision
-                            to life with precision and style. Sharp, fresh, and impossible to ignore.</p>
-                        <a href="/book.html" class="book-btn">Book</a>
-                    </div>
                 </div>
             </section>
-
+        -->
             <!-- Color Services Section -->
 
             <section id="color-services" class="service-category">
@@ -152,7 +161,6 @@
 
                     <div class="category-content">
                         <h2>Color Services</h2>
-                        <p>Classic luxury styles to transformative fantasy hues.</p>
                     </div>
                 </div>
 
@@ -161,118 +169,126 @@
                     <div class="service-item">
                         <div class="service-header">
                             <h3>Root Re-Color</h3>
-                            <span class="price">$65+</span>
+                            <span class="price">$60+</span>
                         </div>
                         <p>Refresh your look with our root coverage service, where we expertly retouch root
-                            grow-out with a single color application. Price may vary depending if extra pre-lightening
-                            is needed.</p>
+                            grow-out with a single color application. </p>
                         <a href="/book.html" class="book-btn">Book</a>
                     </div>
 
                     <div class="service-item">
                         <div class="service-header">
-                            <h3>Highlight Retouch</h3>
-                            <span class="price">$75+</span>
+                            <h3>Highlight Root Retouch</h3>
+                            <span class="price">$85</span>
                         </div>
-                        <p>Fix the highlighted root grow-out seamlessly with a versatile style that's easy to
-                            maintain. With this quick multitasking application, We retouch grays or new hair
-                            growth to bring your look back to life. Must have at least 1 inch root grow-out. Prices can
-                            vary on length.</p>
+                        <p>Fix the highlighted root grow-out seamlessly with a versatile style that’s easy to maintain.
+                        </p>
+
                         <a href="/book.html" class="book-btn">Book</a>
                     </div>
 
                     <div class="service-item">
                         <div class="service-header">
                             <h3>Partial Highlight</h3>
-                            <span class="price">$95</span>
+                            <span class="price">$140</span>
                         </div>
-                        <p>If you're after a more subtle, natural look, partial highlights are for you. We focus
-                            on specific sections—like around your face or the top layers—giving you just the
-                            right amount of lightness and dimension.</p>
+                        <p>If you're after a more subtle, natural look, partial highlights are for you. We focus on
+                            specific sections—like around your face or the top layers—giving you just the right amount
+                            of lightness and dimension. This option is great if you want a little pop without going
+                            all-in.</p>
+                        <p>*includes toner*</p>
                         <a href="/book.html" class="book-btn">Book</a>
                     </div>
 
                     <div class="service-item">
                         <div class="service-header">
                             <h3>Full Highlight</h3>
-                            <span class="price">$150+</span>
+                            <span class="price">$200</span>
                         </div>
-                        <p>For a complete transformation, full highlights give your hair an all-over glow. We
-                            lighten sections throughout your entire head, creating a vibrant, sun-kissed look
-                            from root to tip.</p>
+                        <p>For a complete transformation, full highlights give your hair an all-over glow. We lighten
+                            sections throughout your entire head, creating a vibrant, sun-kissed look from root to tip.
+                            Perfect if you're looking for a bold change or want maximum brightness
+                        </p>
+                        <p>
+                            *includes toner*</p>
                         <a href="/book.html" class="book-btn">Book</a>
                     </div>
 
                     <div class="service-item">
                         <div class="service-header">
-                            <h3>Balyage</h3>
-                            <span class="price">$195+</span>
+                            <h3>Full Balyage</h3>
+                            <span class="price">$220</span>
+                        </div>
+                        <p>Achieve effortlessly multi-dimensional hair with our full balayage technique. These
+                            hand-painted streaks create a blended look with soft transitions to shades of your choice.
+                            Perfect for minimal upkeep, adding dimension, brightness, and a custom finish.</p>
+                        <p>
+
+                            *includes toner* </p>
+                        <a href="/book.html" class="book-btn">Book</a>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-header">
+                            <h3>Partial Balyage</h3>
+                            <span class="price">$160</span>
                         </div>
                         <p>Want that natural, sun-kissed look without the high maintenance? Our balayage service gives
-                            you soft, hand-painted highlights that grow out beautifully and blend like a dream. </p>
+                            you soft, hand-painted highlights that grow out beautifully and blend like a dream. It’s
+                            perfect for adding dimension and a little glow-up to your hair—totally customized.</p>
+                        <p>
+
+                            *includes toner*</p>
                         <a href="/book.html" class="book-btn">Book</a>
                     </div>
 
                     <div class="service-item">
                         <div class="service-header">
-                            <h3>Full Color</h3>
-                            <span class="price">$ Variable - Contact for details</span>
+                            <h3>Full Custom Color</h3>
+                            <span class="price">Starting at $110.00. Prices vary for extra applications</span>
                         </div>
                         <p>If you’re wearing a crown of color lacking its flair, or maybe you’re ready for a
-                            full reset, the transformative power of a color service is designed to enhance your confidence. Prices depend on color choice & additional applications--all
+                            full reset, the transformative power of a color service is designed to enhance your
+                            confidence. Prices depend on color choice & additional applications--all
                             discussed in your free consultation.</p>
                         <a href="/book.html" class="book-btn">Book</a>
                     </div>
 
                     <div class="service-item">
                         <div class="service-header">
-                            <h3>Blonde Ombré</h3>
-                            <span class="price">$ Variable - Contact for details</span>
+                            <h3>Ombré</h3>
+                            <span class="price">$150</span>
                         </div>
-                        <p>This Ombré service gives you a stunning transition from darker roots to lighter blonde ends,
-                            creating a soft, blended look that’s low-maintenance but high-impact.</p>
+                        <p>Ready for a bold, gradient effect? This Ombré service gives you a stunning transition from
+                            darker roots to lighter ends, creating a soft, blended look that’s low-maintenance but
+                            high-impact. Whether you’re going for subtle or dramatic, we’ll customize it to match your
+                            style!</p>
+                        <p>
+
+                            *includes toner*</p>
+                        <a href="/book.html" class="book-btn">Book</a>
+                    </div>
+
+
+                    <div class="service-item">
+                        <div class="service-header">
+                            <h3>Peek-a-Boo: Custom Color</h3>
+                            <span class="price">$85</span>
+                        </div>
+                        <p>Peek-a-boo colors (including vivids!) allow you to unleash your individuality with bold, vibrant colors that create stunning contrasts. Whether you’re looking for a subtle pop of color, or a daring statement, this is perfect for anyone wanting to make a fresh, artistic splash.
+*Includes up to 1.5oz of color. Prices vary for additional applications*</p>
                         <a href="/book.html" class="book-btn">Book</a>
                     </div>
 
                     <div class="service-item">
                         <div class="service-header">
-                            <h3>Color Ombré</h3>
-                            <span class="price">$ Variable - Contact for details</span>
+                            <h3>Blonde Toning</h3>
+                            <span class="price">$35</span>
                         </div>
-                        <p>Ready for a bold, gradient effect with a fun color? This Color Ombré service gives you a
-                            stunning transition from dark roots to dreamy colored ends.</p>
+                        <p>Flawlessly balance and correct unwanted tones, elevate brightness and shine to pre-lightened pigments. Our Toning services enhance your style with ease and match the tones more suitable to your vision!</p>
                         <a href="/book.html" class="book-btn">Book</a>
                     </div>
 
-                    <div class="service-item">
-                        <div class="service-header">
-                            <h3>Expressive Color Blocking</h3>
-                            <span class="price">$85+</span>
-                        </div>
-                        <p>Whether you’re looking for a subtle pop of color, or a daring statement, we tailor the
-                            experience to fit your style. For additional colors and applications - $15/ea</p>
-                        <a href="/book.html" class="book-btn">Book</a>
-                    </div>
-
-                    <div class="service-item">
-                        <div class="service-header">
-                            <h3>Toner</h3>
-                            <span class="price">$35+</span>
-                        </div>
-                        <p>Flawlessly balance and correct unwanted tones, elevate brightness and shine to pre-lightened
-                            pigments. Achieve beautiful blonde tones with this easy one-step application.</p>
-                        <a href="/book.html" class="book-btn">Book</a>
-                    </div>
-
-                    <div class="service-item">
-                        <div class="service-header">
-                            <h3>Color Balyage</h3>
-                            <span class="price">$ Variable - Contact for details</span>
-                        </div>
-                        <p>These hand-painted streaks of color create a blended look with soft transitions to shades of
-                            your choice. Perfect for adding dimension, color effects, and a custom finish.</p>
-                        <a href="/book.html" class="book-btn">Book</a>
-                    </div>
 
                 </div>
             </section>
@@ -287,7 +303,6 @@
 
                     <div class="category-content">
                         <h2>Styling</h2>
-                        <p>From blow-outs and special occasion up-do's to full hair transformations.</p>
                     </div>
                 </div>
 
@@ -383,7 +398,8 @@
                             <h3>Full Transformation</h3>
                             <span class="price">Starting at $350+</span>
                         </div>
-                        <p>Full transformations include a consultation, color service, styling, and any necessary touchups to give you
+                        <p>Full transformations include a consultation, color service, styling, and any necessary
+                            touchups to give you
                             a complete look that's perfect for your event or personal style.</p>
                         <a href="/book.html" class="book-btn">Book</a>
                     </div>
@@ -403,7 +419,6 @@
 
                     <div class="category-content">
                         <h2>Treatments</h2>
-                        <p>From repair services to permanent waves.</p>
                     </div>
                 </div>
 
@@ -436,7 +451,8 @@
                         </div>
                         <p>Professional hair glossing to enhance shine and color vibrancy. This treatment is ideal for
                             those seeking a polished, lustrous finish. This service won't replenish highly damaged hair,
-                            but act as a beautiful finishing touch--that also seals in your color! For damaged hair, please check
+                            but act as a beautiful finishing touch--that also seals in your color! For damaged hair,
+                            please check
                             out our conditioning treatment.</p>
                         <a href="/book.html" class="book-btn">Book</a>
                     </div>
@@ -455,11 +471,8 @@
             <div style="text-align: center; margin-top: 4rem;">
                 <a href="contact.html"><button class="btn btn-primary">Contact For Consultation</button></a>
             </div>
-    <script src="script.js"></script>
+            <script src="script.js"></script>
 </body>
 
 
 </html>
-
-
-
