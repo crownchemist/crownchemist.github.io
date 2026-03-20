@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="booknow.css">
+    <title>Salon Booking</title>
+
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo" onclick="showPage('home')">
+                <img src="logoname-wide.png" alt="Crown Chemist" style="max-height: 50px; width: auto;">
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="https://crownchemist.github.io/index.html" onclick="showPage('home')"
+                        class="nav-link">Home</a></li>
+                <li><a href="https://crownchemist.github.io/services.html" onclick="showPage('services')"
+                        class="nav-link">Services</a></li>
+                <li><a href="https://crownchemist.github.io/portfolio.html" onclick="showPage('portfolio')"
+                        class="nav-link">Portfolio</a></li>
+                <li><a href="https://crownchemist.github.io/about.html" onclick="showPage('about')"
+                        class="nav-link">About</a></li>
+                <li><a href="https://crownchemist.github.io/contact.html" onclick="showPage('contact')"
+                        class="nav-link">Contact</a></li>
+                <li><a href="https://crownchemist.github.io/book.html" onclick="showPage('booking')"
+                        class="nav-link book-btn-nav">Book Now</a></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+
+    <div id="booking" class="page active booking-page">
+        <div class="container">
+            <div class="booking-hero">
+                <h1>Book Your Transformation</h1>
+                <p>Your vision awaits</p>
+            </div>
+            <div class="booking-hero-actions" style="text-align:center; margin-bottom:1rem;">
+                <a href="#" id="toggleSteps" class="text-link btn-toggle" aria-expanded="false"
+                    aria-controls="bookingSteps">Click for Instructions</a>
+            </div>
+            <div id="bookingSteps" class="booking-steps collapsed">
+
+                <div class="booking-step">
+                    <div class="step-number">1</div>
+                    <div class="step-text">
+                        <h4>Services</h4>
+                        <p>Select from our services or book a consultation to discuss your vision.</p>
+                    </div>
+                </div>
+                <div class="booking-step">
+                    <div class="step-number">2</div>
+                    <div class="step-text">
+                        <h4>Share Your Vision</h4>
+                        <p>Provide details about your hair to help us prepare for your
+                            appointment.</p>
+                    </div>
+                </div>
+                <div class="booking-step">
+                    <div class="step-number">3</div>
+                    <div class="step-text">
+                        <h4>Request</h4>
+                        <p>You'll be contacted to discuss suitable times/dates! Please provide a working
+                            phone number.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Booking Form -->
+            <div class="booking-form-container">
+                <div class="form-card">
+
+                    <form action="https://formsubmit.co/crownchemiststudio@gmail.com" method="POST">
+
+                        <!-- FormSubmit config -->
+                        <input type="hidden" name="_subject" value="New Client Inquiry – Crown Chemist">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://crownchemist.github.io/thanks.html">
+
+                        <div id="servicesContainer">
+                            <div class="service-block">
+
+                                <div class="form-section">
+                                    <label class="form-label">What are you looking to book?</label>
+                                    <select class="form-select service-category" name="service_category[]">
+                                        <option value="">Choose a category</option>
+                                        <option value="color">Color Services</option>
+                                        <option value="cut">Haircuts</option>
+                                        <option value="styling">Styling & Treatments</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-section hidden">
+                                    <label class="form-label">Specific Service</label>
+                                    <select class="form-select service-select" name="service[]">
+                                        <option value="">Choose your service</option>
+                                    </select>
+                                </div>
+
+                                <!-- COLOR -->
+                                <div class="color-questions hidden">
+                                    <div class="form-section">
+                                        <label class="form-label">Current Hair Color</label>
+                                        <input type="text" name="current_color[]" class="form-input"
+                                            placeholder="Ex: dark brown, blonde, etc.">
+                                    </div>
+
+                                    <div class="form-section">
+                                        <label class="form-label">Hair History (last 2-3 years)</label>
+                                        <textarea name="hair_history[]" class="form-input"
+                                            placeholder="Color, bleach, box dye, etc."></textarea>
+                                    </div>
+
+                                    <div class="form-section">
+                                        <label class="form-label">Goal / Inspiration</label>
+                                        <textarea name="color_goal[]" class="form-input"
+                                            placeholder="Describe your dream result"></textarea>
+                                    </div>
+                                </div>
+
+                                <!-- CUT -->
+                                <div class="cut-questions hidden">
+                                    <div class="form-section">
+                                        <label class="form-label">Current Length</label>
+                                        <select name="length[]" class="form-select">
+                                            <option value="">Select length</option>
+                                            <option>Short</option>
+                                            <option>Medium</option>
+                                            <option>Long</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-section">
+                                        <label class="form-label">What change are you looking for?</label>
+                                        <textarea name="cut_goal[]" class="form-input"></textarea>
+                                    </div>
+                                </div>
+
+                                <!-- STYLING -->
+                                <div class="styling-questions hidden">
+                                    <div class="form-section">
+                                        <label class="form-label">Hair Concerns</label>
+                                        <input type="text" name="concerns[]" class="form-input"
+                                            placeholder="Frizz, dryness, damage, etc.">
+                                    </div>
+
+                                    <div class="form-section">
+                                        <label class="form-label">What are you hoping to achieve?</label>
+                                        <textarea name="styling_goal[]" class="form-input"></textarea>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+                        <!-- ADD BUTTON -->
+                        <div class="form-section">
+                            <button type="button" id="addServiceBtn" class="btn-booking btn-outline">
+                                ➕ Add Another Service
+                            </button>
+                        </div>
+                        <!-- CONTACT INFO -->
+                        <div class="form-section">
+
+                            <label class="form-label">Your Name</label>
+                            <input type="text" name="name" class="form-input" required>
+
+                            <label class="form-label mt-2">Phone</label>
+                            <input type="tel" name="phone" class="form-input" required>
+
+                            <label class="form-label mt-2">Email</label>
+                            <input type="email" name="email" class="form-input">
+
+                        </div>
+
+                        <button type="submit" class="btn-booking mt-2">
+                            Submit Inquiry ✨
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="booknow.js"></script>
