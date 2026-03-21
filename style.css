@@ -558,12 +558,10 @@ nav {
     .services-subnav {
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         gap: 0.6rem;
-        width: 100vw;
-        left: 0;
-        right: 0;
+        width: 100%;
         position: sticky;
         top: 80px;
         z-index: 100;
@@ -573,8 +571,12 @@ nav {
         box-sizing: border-box;
         overflow-x: auto;
         overflow-y: hidden;
-        scrollbar-width: thin;
-        scrollbar-color: var(--vibrant-purple-neon) var(--matte-black);
+        scrollbar-width: none; /* Hide scrollbar in Firefox */
+        -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+    }
+
+    .services-subnav::-webkit-scrollbar {
+        display: none; /* Hide scrollbar in Chrome, Safari, Opera */
     }
 
     .services-subnav a {
@@ -599,10 +601,11 @@ nav {
     /* Collapse to single-column pills on very small screens for large tap targets */
     @media (max-width: 420px) {
         .services-subnav a {
-            flex-basis: 100%;
-            max-width: 100%;
-            width: 100%;
+            font-size: 0.7rem;
+            padding: 0.35rem 0.7rem;
+            border-radius: 10px;
         }
+    }
     }
 
     .book-btn {
@@ -629,7 +632,7 @@ nav {
     .service-list {
         margin-bottom: 3rem;
     }
-}
+
 
 /* Portfolio Section */
 
