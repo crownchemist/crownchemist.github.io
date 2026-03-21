@@ -99,7 +99,8 @@
                                         <option value="">Choose a category</option>
                                         <option value="color">Color Services</option>
                                         <option value="cut">Haircuts</option>
-                                        <option value="styling">Styling & Treatments</option>
+                                        <option value="styling">Styling</option>
+                                        <option value="treatments">Treatments</option>
                                     </select>
                                 </div>
 
@@ -159,10 +160,22 @@
 
                                     <div class="form-section">
                                         <label class="form-label">What are you hoping to achieve?</label>
-                                        <textarea name="styling_goal[]" class="form-input"></textarea>
+                                        <textarea name="treatments_goal[]" class="form-input"></textarea>
                                     </div>
                                 </div>
 
+                                <!-- TREATMENTS -->
+                                <div class="treatment-questions hidden">
+                                    <div class="form-section">
+                                        <label class="form-label">Hair Concerns</label>
+                                        <input type="text" name="concerns[]" class="form-input">
+                                    </div>
+
+                                    <div class="form-section">
+                                        <label class="form-label">What are you hoping to achieve?</label>
+                                        <textarea name="treatment_goal[]" class="form-input"></textarea>
+                                    </div>
+                                </div>
                             </div>
 
 
