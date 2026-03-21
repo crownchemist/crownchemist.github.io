@@ -142,6 +142,62 @@ nav {
     transition: 0.3s;
 }
 
+/* ===== MOBILE MENU (FIXED CLEAN VERSION) ===== */
+
+.mobile-menu {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.mobile-menu * {
+    margin-left: 0 !important;
+}
+
+/* keep hamburger + label perfectly aligned */
+.mobile-menu .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+
+    align-items: flex-start; /* 🔥 THIS is the fix */
+}
+
+/* make lines visually match MENU text */
+.mobile-menu .hamburger span {
+    width: 34px; /* 🔥 bigger = matches MENU better */
+    height: 2px;
+    background: var(--pure-white);
+    display: block;
+}
+
+
+.mobile-menu .hamburger span {
+    width: 34px !important;
+}
+
+.mobile-menu:hover .hamburger span {
+    background: var(--vibrant-purple-neon);
+    box-shadow: 0 0 8px rgba(179, 71, 217, 0.6);
+}
+
+/* tap / click feedback */
+.mobile-menu:active .hamburger span,
+.mobile-menu:focus-visible .hamburger span {
+    background: var(--vibrant-purple-neon);
+    box-shadow: 0 0 8px rgba(179, 71, 217, 0.6);
+}
+
+/* show on mobile only */
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: flex;
+    }
+}
+
 /* Page Content */
 .page {
     display: none;

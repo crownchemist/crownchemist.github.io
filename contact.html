@@ -7,9 +7,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="book-style.css">
-    <link rel="stylesheet" href="book-form.css">
+    <link rel="stylesheet" href="booknow.css">"
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Bakbak+One&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Grape+Nuts&family=Lato:wght@300;400;700&family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Pen+Script&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@100;300;400;500;600;700&family=Reenie+Beanie&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rock+Salt&family=Special+Elite&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+
     <title>Crown Chemist | Contact</title>
 
 </head>
@@ -35,9 +40,11 @@
                         class="nav-link book-btn-nav">Book Now</a></li>
             </ul>
             <div class="mobile-menu" onclick="toggleMobileMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </nav>
     </header>
@@ -47,30 +54,55 @@
             <div class="booking-hero">
                 <h1>Get In Touch</h1>
                 <p>For all your questions and consultation needs</p>
+                <br>
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <a href="tel:(541)414-3241" class="pill-button">(541) 414 - 3241</a>
+                </div>
             </div>
 
             <div class="contact-grid">
                 <div class="contact-info-box form-card">
                     <div class="contact-info">
+
+
                         <h3>Studio</h3>
-                        <p><strong><i class="fa-solid fa-location-dot"></i> Location:</strong><br>
-                            650 E Pine st <br> Suite 101<br>
-                            Central Point, OR 97502</p>
+                        <p>
+                        <div style="display: flex; align-items: center; gap: 20px;">
+                            <i class="fa-solid fa-location-dot"
+                                style="font-size: 48px; background: linear-gradient(135deg, #9333ea, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; flex-shrink: 0;"></i>
+                            <div>
+                                <p><strong style="color: #9333ea; text-transform: uppercase;">Location:</strong><br>
+                                    650 E Pine st <br> Suite 101<br>
+                                    Central Point, OR 97502</p>
+                            </div>
+                        </div>
 
-                        <p><strong><i class="fa-solid fa-phone"></i> Phone:</strong><br>
-                            <a href="tel:(541)414-3241">(541) 414 - 3241</a></p>
 
 
-                        <p><strong><i class="fa-solid fa-clock"></i> Hours:</strong><br>
-                            Friday: 9:30am - 7:00pm <br>
-                            Saturday: 9:30am - 7:00pm<br>
-                            Sunday: 9:30am - 7:00pm<br>
-                            Monday - Thursday: Closed</p>
 
-                        <p><strong><i class="fa-solid fa-at"></i> More Info:</strong><br>
-
-                            <a href="https://crown-chemist.square.site" class="text-link" target="_blank"
-                                rel="noopener">Square Site</a>
+                        <div style="display: flex; align-items: center; gap: 20px;">
+                            <i class="fa-solid fa-clock"
+                                style="font-size: 48px; background: linear-gradient(135deg, #9333ea, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; flex-shrink: 0;"></i>
+                            <div>
+                                <p><strong style="color: #9333ea; text-transform: uppercase;">Hours:</strong><br>
+                                    Friday: 9:30am - 7:00pm <br>
+                                    Saturday: 9:30am - 7:00pm<br>
+                                    Sunday: 9:30am - 7:00pm<br>
+                                    Monday - Thursday: Closed</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 20px;">
+                            <i class="fa-solid fa-at"
+                                style="font-size: 48px; background: linear-gradient(135deg, #9333ea, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; flex-shrink: 0;"></i>
+                            <div>
+                                <p><strong style="color: #9333ea; text-transform: uppercase;">Socials &
+                                        Links:</strong><br>
+                                    <a href="https://www.instagram.com/crownchemiststudio/" target="_blank"
+                                        rel="noopener" style="text-decoration: none; color: inherit;">Instagram</a><br>
+                                    <a href="https://crown-chemist.square.site" target="_blank" rel="noopener"
+                                        style="text-decoration: none; color: inherit;">Square Site</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -84,8 +116,6 @@
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_template" value="table">
                         <input type="hidden" name="_next" value="https://crownchemist.github.io/contact-thanks.html">
-                        <!-- Optional redirect after submit -->
-                        <!-- <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html"> -->
 
                         <div class="form-group">
                             <label for="name">Name *</label>
@@ -117,7 +147,7 @@
                             <textarea class="form-input" id="message" name="message" rows="5" required></textarea>
                         </div>
 
-                        <button type="submit" class="btn-booking">Send Message</button>
+                        <button type="submit" class="btn-booking mt-2">Send Message</button>
                     </form>
                 </div>
 
