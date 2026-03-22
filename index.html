@@ -1,60 +1,256 @@
-
 <!DOCTYPE html>
 
+
+
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
+
     <link rel="stylesheet" href="booknow.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Bakbak+One&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Grape+Nuts&family=Lato:wght@300;400;700&family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Pen+Script&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@100;300;400;500;600;700&family=Reenie+Beanie&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rock+Salt&family=Special+Elite&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <title>Crown Chemist | Hair Design & Color Theory</title>
-    
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Bakbak+One&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Grape+Nuts&family=Lato:wght@300;400;700&family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Pen+Script&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@100;300;400;500;600;700&family=Reenie+Beanie&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rock+Salt&family=Special+Elite&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+
+    <title>Crown Chemist | Hair Design & Color</title>
+
+
+
 </head>
+
 <body>
+
     <header>
+
         <nav class="container">
+
             <div class="logo" onclick="showPage('home')">
+
                 <img src="logoname-wide.png" alt="Crown Chemist" style="max-height: 50px; width: auto;">
+
             </div>
+
             <ul class="nav-links" id="navLinks">
-                <li><a href="https://crownchemist.github.io/index.html" onclick="showPage('home')" class="nav-link">Home</a></li>
-                <li><a href="https://crownchemist.github.io/services.html" onclick="showPage('services')" class="nav-link">Services</a></li>
-                <li><a href="https://crownchemist.github.io/portfolio.html" onclick="showPage('portfolio')" class="nav-link">Portfolio</a></li>
-                <li><a href="https://crownchemist.github.io/about.html" onclick="showPage('about')" class="nav-link">About</a></li>
-                <li><a href="https://crownchemist.github.io/contact.html" onclick="showPage('contact')" class="nav-link">Contact</a></li>
-                <li><a href="https://crownchemist.github.io/booknow.html" onclick="showPage('booking')" class="nav-link book-btn-nav">Book Now</a></li>
+
+                <li><a href="https://crownchemist.github.io/index.html" onclick="showPage('home')"
+                        class="nav-link">Home</a></li>
+
+                <li><a href="https://crownchemist.github.io/services.html" onclick="showPage('services')"
+                        class="nav-link">Services</a></li>
+
+                <li><a href="https://crownchemist.github.io/portfolio.html" onclick="showPage('portfolio')"
+                        class="nav-link">Portfolio</a></li>
+
+                <li><a href="https://crownchemist.github.io/about.html" onclick="showPage('about')"
+                        class="nav-link">About</a></li>
+
+                <li><a href="https://crownchemist.github.io/contact.html" onclick="showPage('contact')"
+                        class="nav-link">Contact</a></li>
+
+                <li><a href="https://crownchemist.github.io/booknow.html" onclick="showPage('booking')"
+                        class="nav-link book-btn-nav">Book Now</a></li>
+
             </ul>
+
             <div class="mobile-menu" onclick="toggleMobileMenu()">
+
                 <div class="hamburger">
+
                     <span></span>
+
                     <span></span>
+
                     <span></span>
+
                 </div>
+
             </div>
+
         </nav>
+
     </header>
-    
-<!-- HOME PAGE -->
-<div id="home" class="page active">
-    <section class="hero">
-        <div class="hero-content container">
-            <img src="logocrown.png" alt="Crown Logo" style="width:150px;height:120px;"><br>
-            <h1>Crown Chemist</h1><br>
-            <img src="hairbykatie.png" alt="Hair By Katie" style="width:300px;height:100px;"><br>
-            
-            <p class="subtitle">Artistic architect of hair design & color transformation. From creative, vivid designs to refined professional cuts, each service is crafted with intention. Precision, flexibility, and hair-health expertise come together to deliver consistently high-quality care.</p>
-            <div class="cta-buttons">
-                <a href="https://crownchemist.github.io/booknow.html" class="btn btn-primary">Unleash Your Vision</a>
-                <a href="https://crownchemist.github.io/portfolio.html" class="btn btn-secondary">Witness Magic</a>
-            </div>
+
+
+
+
+
+    <body>
+
+
+
+        <!-- NEW HOMEPAGE -->
+
+        <div class="cc-home">
+
+
+
+            <!-- HERO -->
+
+            <section class="cc-hero">
+
+                <div class="cc-container">
+
+                    <h1>Cuts and Color For Your Crown</h1>
+
+                    <p>Specializing in color transformation, dimensional blonding, and refined hair styles created just
+                        for
+                        you.</p>
+
+                    <a href="booknow.html" class="cc-btn cc-btn-primary">Book Appointment</a>
+
+                    <a href="portfolio.html" class="cc-btn cc-btn-secondary">View Work</a>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- PORTFOLIO -->
+
+            <section class="cc-section">
+
+                <div class="cc-container">
+
+                    <h2>Recent Work</h2>
+
+                    <div class="cc-grid">
+
+                        <img src="naomi_cut2.jpeg">
+
+                        <img src="highlight_1.jpg">
+
+                        <img src="lily_color1.jpg">
+
+                        <img src="naomi_4.jpg">
+
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ABOUT -->
+
+            <section class="cc-section cc-about">
+
+                <div class="cc-container">
+
+                    <img src="logocrown.png" alt="Crown Logo" style="width:150px;height:120px;"><br>
+
+                    <h2>Meet Your Stylist</h2>
+
+                    <p>My name is Katie, and I'm a Rogue Valley native specializing in hair design & color
+                        transformation. From creative, vivid designs to refined
+                        professional cuts, each service is crafted with intention.</p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- SERVICES -->
+
+            <section class="cc-section">
+
+                <div class="cc-container">
+
+                    <h2>Services</h2>
+
+                    <div class="cc-services">
+
+                        <div class="cc-card">
+
+                            <h3>Custom Color</h3>
+
+                            <p>Tailored shades designed for you.</p>
+
+                        </div>
+
+                        <div class="cc-card">
+
+                            <h3>Blonding</h3>
+
+                            <p>Dimensional Highlights, Balyage and seamless gradients.</p>
+
+                        </div>
+
+
+                        <div class="cc-card">
+
+                            <h3>Haircuts</h3>
+
+                            <p>From precision cuts that turn heads, to soft layers & fun textures for movement and
+                                style.</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- TESTIMONIALS -->
+
+            <section class="cc-section">
+
+                <div class="cc-container">
+
+                    <h2>Socails</h2>
+
+                    <p class="cc-testimonial">Instagram: @crownchemiststudio</p>
+
+                    <p class="cc-testimonial">Gloss Genius: Babecavebeautycp.glossgenius.com</p>
+
+                    <p class="cc-testimonial">Square: crown-chemist.square.site</p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- FINAL CTA -->
+
+            <section class="cc-section cc-final">
+
+                <div class="cc-container">
+
+                    <h2>Ready For Your Dream Hair?</h2>
+
+                    <a href="booknow.html" class="cc-btn cc-btn-primary">Book Now</a>
+
+                </div>
+
+            </section>
+
+
+
         </div>
-    </section>
-</div>
 
-<script src="script.js"></script>
 
-</body>
+
+        <script src="script.js"></script>
+
+
+
+    </body>
+
 </html>

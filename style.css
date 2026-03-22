@@ -179,12 +179,14 @@ nav {
     justify-content: center;
     gap: 4px;
 
-    align-items: flex-start; /* 🔥 THIS is the fix */
+    align-items: flex-start;
+    /* 🔥 THIS is the fix */
 }
 
 /* make lines visually match MENU text */
 .mobile-menu .hamburger span {
-    width: 34px; /* 🔥 bigger = matches MENU better */
+    width: 34px;
+    /* 🔥 bigger = matches MENU better */
     height: 2px;
     background: var(--pure-white);
     display: block;
@@ -213,6 +215,7 @@ nav {
         display: flex;
     }
 }
+
 /* Page Content */
 .page {
     display: none;
@@ -225,7 +228,336 @@ nav {
     display: block;
 }
 
-/* Home Page - FIXED: Removed fixed height, added min-height and padding */
+/* ===============================
+
+     HOMEPAGE UNIQUE STYLES - VERSION 2.0 (cc- prefix)
+
+     =============================== */
+
+
+
+.cc-home {
+
+    background: #0f0f0f;
+
+    color: #fff;
+
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+
+.cc-container {
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 0 20px;
+
+}
+
+
+
+/* HERO */
+
+.cc-hero {
+
+    min-height: 90vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.85)), url('hairbanner.png') center/cover no-repeat;
+
+}
+
+
+
+.cc-hero h1 {
+
+    font-size: 3rem;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.cc-hero p {
+
+    max-width: 600px;
+
+    margin: 0 auto 30px;
+
+    opacity: 0.85;
+
+}
+
+
+
+.cc-btn {
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    display: inline-block;
+
+    margin: 5px;
+
+    transition: 0.3s ease;
+
+}
+
+
+
+.cc-btn-primary {
+
+    background: linear-gradient(135deg, #8A2BE2, #B347D9);
+
+    color: var(--pure-white);
+
+}
+
+
+
+.cc-btn-secondary {
+
+    border: 1px solid;
+
+    color: var(--pure-white);
+
+    border-color: var(--vibrant-purple);
+
+}
+
+
+
+.cc-btn:hover {
+
+    transform: translateY(-2px);
+
+}
+
+
+
+/* SECTION BASE */
+
+.cc-section {
+
+    padding: 80px 0;
+
+    text-align: center;
+
+}
+
+
+
+/* PORTFOLIO */
+
+.cc-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+}
+
+
+
+.cc-grid img {
+
+    width: 100%;
+
+    border-radius: 10px;
+
+}
+
+
+
+/* ABOUT */
+
+.cc-about p {
+
+    max-width: 600px;
+
+    margin: auto;
+
+    opacity: 0.85;
+
+}
+
+
+
+/* SERVICES */
+
+.cc-services {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+
+    margin-top: 30px;
+
+}
+
+
+
+.cc-card {
+
+    background: #1a1a1a;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+}
+
+
+
+/* TESTIMONIALS */
+
+.cc-testimonial {
+
+    max-width: 600px;
+
+    margin: 20px auto;
+
+    font-style: italic;
+
+    opacity: 0.85;
+
+}
+
+
+
+/* FINAL CTA */
+
+.cc-final {
+
+    background: rgba(179, 71, 217, 0.22);
+
+    color: #fff;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===============================
+   MOBILE OPTIMIZATION (cc only)
+   =============================== */
+
+@media (max-width: 768px) {
+
+    /* CONTAINER */
+    .cc-container {
+        padding: 0 16px;
+    }
+
+    /* HERO */
+    .cc-hero {
+        min-height: 80vh;
+        padding: 60px 0;
+    }
+
+    .cc-hero h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .cc-hero p {
+        font-size: 0.95rem;
+        margin-bottom: 25px;
+    }
+
+    /* BUTTONS STACK */
+    .cc-btn {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    /* SECTIONS */
+    .cc-section {
+        padding: 60px 0;
+    }
+
+    .cc-section h2 {
+        font-size: 1.6rem;
+    }
+
+    /* GRID (portfolio) */
+    .cc-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* SERVICES STACK */
+    .cc-services {
+        grid-template-columns: 1fr;
+    }
+
+    /* CARDS */
+    .cc-card {
+        padding: 20px;
+    }
+
+    /* TESTIMONIAL */
+    .cc-testimonial {
+        font-size: 0.95rem;
+        padding: 0 10px;
+    }
+
+    .cc-hero {
+        background-position: center;
+    }
+
+    .cc-btn {
+        min-height: 48px;
+    }
+
+    .cc-section+.cc-section {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .cc-hero h1 {
+        font-size: 1.7rem;
+    }
+
+    .cc-hero p {
+        font-size: 0.9rem;
+    }
+
+    .cc-section {
+        padding: 50px 0;
+    }
+
+}
+
+
+
+
+/* Home Page - Old Version 1.0 */
 .hero {
     min-height: calc(100vh - 120px);
     display: flex;
@@ -571,12 +903,15 @@ nav {
         box-sizing: border-box;
         overflow-x: auto;
         overflow-y: hidden;
-        scrollbar-width: none; /* Hide scrollbar in Firefox */
-        -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+        scrollbar-width: none;
+        /* Hide scrollbar in Firefox */
+        -ms-overflow-style: none;
+        /* Hide scrollbar in IE and Edge */
     }
 
     .services-subnav::-webkit-scrollbar {
-        display: none; /* Hide scrollbar in Chrome, Safari, Opera */
+        display: none;
+        /* Hide scrollbar in Chrome, Safari, Opera */
     }
 
     .services-subnav a {
@@ -606,32 +941,32 @@ nav {
             border-radius: 10px;
         }
     }
-    }
+}
 
-    .book-btn {
-        display: block;
-        width: 100%;
-        text-align: center;
-        margin-top: 1rem;
-        padding: 0.65rem;
-    }
+.book-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 0.65rem;
+}
 
-    .service-item:hover {
-        box-shadow: none;
-    }
+.service-item:hover {
+    box-shadow: none;
+}
 
-    .service-item {
-        box-shadow:
-            0 0 12px rgba(140, 80, 200, 0.2);
-    }
+.service-item {
+    box-shadow:
+        0 0 12px rgba(140, 80, 200, 0.2);
+}
 
-    .service-category {
-        padding: 2rem 1rem;
-    }
+.service-category {
+    padding: 2rem 1rem;
+}
 
-    .service-list {
-        margin-bottom: 3rem;
-    }
+.service-list {
+    margin-bottom: 3rem;
+}
 
 
 /* Portfolio Section */
