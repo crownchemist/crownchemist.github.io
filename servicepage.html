@@ -1,0 +1,668 @@
+<!-- SERVICES PAGE -->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="servicestyle.css">
+    <link rel="stylesheet" href="booknow.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Bakbak+One&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Grape+Nuts&family=Lato:wght@300;400;700&family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Pen+Script&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@100;300;400;500;600;700&family=Reenie+Beanie&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rock+Salt&family=Special+Elite&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <title>Crown Chemist | Services</title>
+
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo" onclick="showPage('home')">
+                <img src="logoname-wide.png" alt="Crown Chemist" style="max-height: 50px; width: auto;">
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="https://crownchemist.github.io/index.html" onclick="showPage('home')"
+                        class="nav-link">Home</a></li>
+                <li><a href="https://crownchemist.github.io/services.html" onclick="showPage('services')"
+                        class="nav-link">Services</a></li>
+                <li><a href="https://crownchemist.github.io/portfolio.html" onclick="showPage('portfolio')"
+                        class="nav-link">Portfolio</a></li>
+                <li><a href="https://crownchemist.github.io/about.html" onclick="showPage('about')"
+                        class="nav-link">About</a></li>
+                <li><a href="https://crownchemist.github.io/contact.html" onclick="showPage('contact')"
+                        class="nav-link">Contact</a></li>
+                <li><a href="https://crownchemist.github.io/booknow.html" onclick="showPage('booking')"
+                        class="nav-link book-btn-nav">Book Now</a></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMobileMenu()">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="services" class="page active">
+        <div class="container services-content">
+            <div class="booking-hero">
+                <h1>Services</h1>
+            </div>
+
+            <nav class="services-subnav">
+                <a href="#hair-cuts">Cuts</a>
+                <a href="#color-services">Color</a>
+                <a href="#styling-services">Style</a>
+                <a href="#treatments-services">Treatment</a>
+            </nav>
+
+            <section id="hair-cuts" class="service-category">
+                <div class="service-category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-scissors"></i>
+                    </div>
+
+                    <div class="category-content">
+                        <h2>Hair Cuts</h2>
+                    </div>
+                </div>
+                <div class="service-list">
+
+                    <div class="service-item">
+
+                        <div class="service-media">
+                            <img src="cuts.png" alt="Essential Cut">
+                        </div>
+
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Essential Cut</h3>
+                                <span class="price">$40</span>
+                            </div>
+                            <p>If you’re looking for a quick refresh and classic trim, our essential cuts deliver just
+                                that.
+                            </p>
+                            <a href="/booknow.html" class="book-btn">Book</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-media">
+                            <img src="naomi_cut4.jpeg" alt="Essential Cut">
+                        </div>
+
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Specialty Cut</h3>
+                                <span class="price">$50</span>
+                            </div>
+                            <p>Ready to switch up your look? For customized cuts, clean fades, or luxurious layers,
+                                we’ll
+                                get you looking sharp. Includes consultation, wash, and style. </p>
+                            <a href="/booknow.html" class="book-btn">Book</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-media">
+                            <img src="drips_1.jpg" alt="Essential Cut">
+                        </div>
+
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Custom Hair Tattoo</h3>
+                                <span class="price">Hourly rate $45/hr</span>
+                            </div>
+                            <p>Make your cut a canvas. Our artistic designs include a haircut & creative
+                                detailing. From geometric patterns to freestyle artwork, we’ll bring your vision to life
+                                with
+                                precision and style. Consultation included to establish artwork size and intricacy</p>
+                            <a href="/booknow.html" class="book-btn">Book</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-media">
+                            <img src="lily_1.jpg" alt="Essential Cut">
+                        </div>
+
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Kid's Haircut (12 & Under)</h3>
+                                <span class="price">$25</span>
+                            </div>
+                            <p>Customized cut with consultation, wash, and style.</p>
+                            <a href="/booknow.html" class="book-btn">Book</a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Mens Shave Etc-->
+            <!--
+            <section id="shave-services" class="service-category">
+                <div class="service-category-card">
+                    <div class="category-icon">
+                        <i class="fa-solid fa-crown"></i>
+                    </div>
+
+                    <div class="category-content">
+                        <h2>Shaves & Grooming</h2>
+                    </div>
+                </div>
+
+                <div class="service-list">
+
+                    <div class="service-item">
+                        <div class="service-header">
+                            <h3>Classic Men's Shave</h3>
+                            <span class="price">$25+</span>
+                        </div>
+                        <p>Full face shave with lather and finish.</p>
+                        <a href="/book.html" class="book-btn">Book</a>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-header">
+                            <h3>Mustache & Beard Trim</h3>
+                            <span class="price">$10+</span>
+                        </div>
+                        <p>Whether you need a little shape or a clean-up, we’ve got you covered. Shave additional + $7
+                        </p>
+                        <a href="/book.html" class="book-btn">Book</a>
+                    </div>
+
+                </div>
+            </section>
+        -->
+            <!-- Color Services Section -->
+
+            <section id="color-services" class="service-category">
+                <div class="service-category-card">
+                    <div class="category-icon">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+
+                    <div class="category-content">
+                        <h2>Color Services</h2>
+                    </div>
+                </div>
+
+                <div class="service-list">
+
+                    <div class="service-item">
+                        <div class="service-media">
+                            <img src="root_recolor.png" alt="Essential Cut">
+                        </div>
+
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Root Color</h3>
+                                <span class="price">$60+</span>
+                            </div>
+                            <p>Refresh your look with our root coverage service, where we expertly retouch root
+                                grow-out with a single color application.</p>
+                            <div class="book-btn-wrap">
+                                <a href="/booknow.html" class="book-btn">Book</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-media">
+                            <img src="highlight_3.jpg" alt="Essential Cut">
+                        </div>
+
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Highlight Root Retouch</h3>
+                                <span class="price">$90</span>
+                            </div>
+                            <p>Fix the highlighted root grow-out seamlessly with a versatile style that’s easy to
+                                maintain.
+                            </p>
+
+                            <a href="/booknow.html" class="book-btn">Book</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-media">
+                            <img src="partial_highlight.jpg" alt="Essential Cut">
+                        </div>
+
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Partial Highlight</h3>
+                                <span class="price">$140</span>
+                            </div>
+                            <p>If you're after a more subtle, natural look, partial highlights are for you. We focus on
+                                specific sections—like around your face or the top layers—giving you just the right
+                                amount
+                                of lightness and dimension. This option is great if you want a little pop without going
+                                all-in.</p>
+                            <p>*includes toner*</p>
+                            <a href="/booknow.html" class="book-btn">Book</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-media">
+                            <img src="highlight_1.jpg" alt="Essential Cut">
+                        </div>
+
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Full Highlight</h3>
+                                <span class="price">$200</span>
+                            </div>
+                            <p>For a complete transformation, full highlights give your hair an all-over glow. We
+                                lighten
+                                sections throughout your entire head, creating a vibrant, sun-kissed look from root to
+                                tip.
+                                Perfect if you're looking for a bold change or want maximum brightness
+                            </p>
+                            <p>
+                                *includes toner*</p>
+                            <a href="/booknow.html" class="book-btn">Book</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-media">
+                            <img src="lily_blonde5.jpg" alt="Essential Cut">
+                        </div>
+
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Full Balayage</h3>
+                                <span class="price">$220</span>
+                            </div>
+                            <p>Achieve effortlessly multi-dimensional hair with our full balayage technique. These
+                                hand-painted streaks create a blended look with soft transitions to shades of your
+                                choice.
+                                Perfect for minimal upkeep, adding dimension, brightness, and a custom finish.</p>
+                            <p>
+
+                                *includes toner* </p>
+                            <a href="/booknow.html" class="book-btn">Book</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-media">
+                            <img src="partial_balyage.jpg" alt="Essential Cut">
+                        </div>
+
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Partial Balayage</h3>
+                                <span class="price">$160</span>
+                            </div>
+                            <p>Want that natural, sun-kissed look without the high maintenance? Our balayage service
+                                gives
+                                you soft, hand-painted highlights that grow out beautifully and blend like a dream. It’s
+                                perfect for adding dimension and a little glow-up to your hair—totally customized.</p>
+                            <p>
+
+                                *includes toner*</p>
+                            <a href="/booknow.html" class="book-btn">Book</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-media">
+                            <img src="full_color.jpg" alt="Essential Cut">
+                        </div>
+
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Full Custom Color</h3>
+                                <span class="price">Starting at $110.00</span>
+                            </div>
+                            <p>If your color is lacking it's flair, or maybe you’re ready for a
+                                full reset, this color service is designed to enhance your
+                                confidence. Prices depend on color goal & additional applications--all
+                                discussed in your free consultation.</p>
+                            <a href="/booknow.html" class="book-btn">Book</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-media">
+                            <img src="naomi_4.jpg" alt="Essential Cut">
+                        </div>
+
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Ombré</h3>
+                                <span class="price">$150</span>
+                            </div>
+                            <p>Ready for a bold, gradient effect? This gives you a stunning transition from
+                                darker roots to lighter ends, creating a soft, blended look that’s low-maintenance but
+                                high-impact. Whether you’re going for subtle or dramatic, we’ll customize it to match
+                                your
+                                style!</p>
+                            <a href="/booknow.html" class="book-btn">Book</a>
+                        </div>
+                    </div>
+
+
+                    <div class="service-item">
+                        <div class="service-media">
+                            <img src="peekaboo.jpg" alt="Essential Cut">
+                        </div>
+
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Peek-a-Boo: Custom Color</h3>
+                                <span class="price">$85</span>
+                            </div>
+                            <p>Peek-a-boo colors allow you to unleash your individuality with bold,
+                                vibrant colors that create stunning contrasts. Whether you’re looking for a subtle pop
+                                of
+                                color, or a daring statement, this is perfect for anyone wanting to make a fresh,
+                                artistic
+                                splash.
+                                *Includes up to 1.5oz of color. Prices vary for additional applications*</p>
+                            <a href="/booknow.html" class="book-btn">Book</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-media">
+                            <img src="toner.jpg" alt="Essential Cut">
+                        </div>
+
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Blonde Toning</h3>
+                                <span class="price">$35</span>
+                            </div>
+                            <p>Flawlessly balance and correct unwanted tones, elevate brightness and shine to
+                                pre-lightened
+                                pigments. Our Toning services enhance your style with ease and match the tones more
+                                suitable
+                                to your vision!</p>
+                            <a href="/booknow.html" class="book-btn">Book</a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+            <!-- Styling & Treatments Section -->
+
+            <section id="styling-services" class="service-category">
+                <div class="service-category-card">
+                    <div class="category-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                    </div>
+
+                    <div class="category-content">
+                        <h2>Styling</h2>
+                    </div>
+                </div>
+
+                <div class="service-list">
+
+                    <div class="service-item">
+                        <div class="service-media">
+                            <img src="naomi_cut1.jpeg" alt="Essential Cut">
+                        </div>
+
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Shampoo & Style</h3>
+                                <span class="price">$45</span>
+                            </div>
+                            <p>Sometimes, you just need that fresh-washed, perfectly styled feeling. We start with a
+                                deep
+                                cleanse and scalp massage, then finish with a blow-dry and styling that fits your vibe.
+                            </p>
+                            <a href="/booknow.html" class="book-btn">Book</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-media">
+                            <img src="blowout.jpg" alt="Essential Cut">
+                        </div>
+
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Blow-out</h3>
+                                <span class="price">Starting at $45</span>
+                            </div>
+                            <p>Our signature blow-out gives you that fresh-from-the-salon bounce,
+                                shine, and volume that lasts. Whether you're heading to brunch, a night out, or just
+                                want to
+                                feel fabulous, we’ve got you covered—no flat irons required.
+                            </p>
+                            <a href="/booknow.html" class="book-btn">Book</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-media">
+                            <img src="curling.jpg" alt="Essential Cut">
+                        </div>
+
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Curls</h3>
+                                <span class="price">$30</span>
+                            </div>
+                            <p>For soft waves and bouncy curls, we bring the volume, texture, and movement your hair's
+                                been craving.</p>
+                            <a href="/booknow.html" class="book-btn">Book</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-media">
+                            <img src="straightening.jpg" alt="Essential Cut">
+                        </div>
+
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Straightening</h3>
+                                <span class="price">$30</span>
+                            </div>
+                            <p>Our straightening services are here to tame the frizz and bring the shine.</p>
+                            <a href="/booknow.html" class="book-btn">Book</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-media">
+                            <img src="wetset.jpg" alt="Essential Cut">
+                        </div>
+
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Wet-set Curls</h3>
+                                <span class="price">Starting at $45</span>
+                            </div>
+                            <p>For curls that last, we use a wet-set technique that locks in your style and gives you
+                                that
+                                perfect bounce. Price can vary on hair length.</p>
+                            <a href="/booknow.html" class="book-btn">Book</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-media">
+                            <img src="Untitled design (26).png" alt="Essential Cut">
+                        </div>
+
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Full Braids</h3>
+                                <span class="price">$210+</span>
+                            </div>
+                            <p>From custom design cornrows to box braids, our braiding services are all about style,
+                                creativity, and protective care.</p>
+                            <a href="/booknow.html" class="book-btn">Book</a>
+                        </div>
+                    </div>
+
+
+
+                    <div class="service-item">
+                        <div class="service-media">
+                            <img src="extensions2.jpg" alt="Essential Cut">
+                        </div>
+
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Hair Extensions</h3>
+                                <span class="price">$ Variable</span>
+                            </div>
+                            <p>More length, more volume—Our premium hair extensions blend seamlessly and feel just like
+                                the
+                                real deal. Prices depend on extension hair length and amount.</p>
+                            <a href="/booknow.html" class="book-btn">Book</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-media">
+                            <img src="updo.jpg" alt="Essential Cut">
+                        </div>
+
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Special Occasion Updo</h3>
+                                <span class="price">$ Variable</span>
+                            </div>
+                            <p>Special occasion updos are custom designed to complement your event and personal style.
+                                Prices vary based on complexity and hair length.</p>
+                            <a href="/booknow.html" class="book-btn">Book</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-media">
+                            <img src="michelle_curls5.jpg" alt="Essential Cut">
+                        </div>
+
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Full Transformation</h3>
+                                <span class="price">Starting at $350+</span>
+                            </div>
+                            <p>Full transformations include a consultation, haircut, color service, styling, and any
+                                necessary
+                                touchups to give you
+                                a complete look that's perfect for your event or personal style.</p>
+                            <a href="/booknow.html" class="book-btn">Book</a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+
+            <!-- Treatments Section -->
+
+            <section id="treatments-services" class="service-category">
+                <div class="service-category-card">
+                    <div class="category-icon">
+                        <i class="fa-solid fa-droplet"></i>
+
+                    </div>
+
+                    <div class="category-content">
+                        <h2>Treatments</h2>
+                    </div>
+                </div>
+
+                <div class="service-list">
+
+                    <div class="service-item">
+                        <div class="service-media">
+                            <img src="long_perm.jpg" alt="Essential Cut">
+                        </div>
+
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Perm</h3>
+                                <span class="price">Short/Medium - $75 | Long - $110</span>
+                            </div>
+                            <p>Achieve permanent waves with our professional perm service. From subtle curls to full
+                                spiral
+                                waves, we'll give you the look you've been dreaming of.</p>
+                            <a href="/booknow.html" class="book-btn">Book</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-media">
+                            <img src="deep_conditioning.jpg" alt="Essential Cut">
+                        </div>
+
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Deep Conditioning Treatment</h3>
+                                <span class="price">$45+</span>
+                            </div>
+                            <p>Professional conditioning treatments nourish and repair damaged, brittle hair -
+                                leaving it
+                                soft, shiny, and healthy.</p>
+                            <a href="/booknow.html" class="book-btn">Book</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-media">
+                            <img src="hair_gloss.jpg" alt="Essential Cut">
+                        </div>
+
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Hair Glossing</h3>
+                                <span class="price">$35+</span>
+                            </div>
+                            <p>Professional hair glossing to enhance shine and color vibrancy. This treatment is ideal
+                                for
+                                those seeking a polished, lustrous finish, that also seals in your color and moisture!
+                                For
+                                extra dry or damaged hair,
+                                please check
+                                out our conditioning treatment.</p>
+                            <a href="/booknow.html" class="book-btn">Book</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-media">
+                            <img src="hair_mask.jpg" alt="Essential Cut">
+                        </div>
+
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Conditioning Hair Mask</h3>
+                                <span class="price">$20</span>
+                            </div>
+                            <p>Our conditioning hair mask revitalizes your hair, leaving it soft and manageable.</p>
+                            <a href="/booknow.html" class="book-btn">Book</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <a href="contact.html"><button class="btn btn-primary">Contact For Consultation</button></a>
+            </div>
+            <script src="script.js"></script>
+</body>
+
+
+</html>

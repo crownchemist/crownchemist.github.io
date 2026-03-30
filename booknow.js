@@ -208,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (toggle && steps) {
 
     if (steps.classList.contains("collapsed")) {
-      toggle.textContent = "Click for Instructions";
+      toggle.textContent = "About Our Process";
       toggle.setAttribute("aria-expanded", "false");
     } else {
       toggle.textContent = "Hide Info";
@@ -221,7 +221,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const collapsed = steps.classList.toggle("collapsed");
 
       if (collapsed) {
-        toggle.textContent = "Click for Instructions";
+        toggle.textContent = "About Our Process";
         toggle.setAttribute("aria-expanded", "false");
       } else {
         toggle.textContent = "Hide Info";

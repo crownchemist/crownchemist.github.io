@@ -746,7 +746,7 @@ html {
 }
 
 .service-list {
-    max-width: 720px;
+    max-width: 1000px; /* or 720px if you want slightly tighter */
     margin: 0 auto 5rem;
 }
 
@@ -759,6 +759,7 @@ html {
         transform 0.35s ease,
         border-color 0.35s ease,
         box-shadow 0.35s ease;
+    align-items: flex-start;
 }
 
 /* Hover effect — mirrors old service-card */
@@ -768,6 +769,21 @@ html {
     box-shadow:
         0 10px 30px rgba(120, 60, 180, 0.35),
         0 0 18px rgba(140, 80, 200, 0.45);
+}
+
+.service-media img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 8px;
+
+    /* subtle aesthetic glow */
+    box-shadow: 0 0 12px rgba(138, 43, 226, 0.25);
+}
+
+.service-content {
+    display: flex;
+    flex-direction: column;
 }
 
 .service-header {
@@ -801,20 +817,36 @@ html {
         "GRAD" 0;
     font-size: 0.85rem;
     opacity: 0.7;
-    max-width: 85%;
+    max-width: 100%;
+}
+
+.book-btn-wrap {
+    display: flex;
+    justify-content: flex-start;
+    /* 👈 forces left alignment */
 }
 
 .book-btn {
-    display: inline-block;
-    margin-top: 0.75rem;
+    display: inline-flex;
+    /* 👈 stronger than inline-block */
+    align-items: center;
+
+    margin-top: 0.5rem;
+
     font-size: 0.7rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    padding: 0.4rem 0.8rem;
+
+    padding: 0.35rem 0.7rem;
+
     border: 1px solid var(--vibrant-purple-neon);
     color: var(--vibrant-purple-neon);
     background: rgba(30, 30, 30, 0.85);
+
     text-decoration: none;
+
+    width: fit-content;
+    /* 👈 THIS is the magic line */
 }
 
 .book-btn:hover {
@@ -859,27 +891,6 @@ html {
 }
 
 @media (max-width: 768px) {
-    .service-category-card {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .category-icon {
-        margin: 0 auto 1rem;
-    }
-
-    .service-item {
-        transform: none !important;
-        box-shadow:
-            0 0 16px rgba(140, 80, 200, 0.15);
-        border-color: rgba(255, 255, 255, 0.15);
-    }
-
-    .service-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.25rem;
-    }
 
     .price {
         font-size: 1.0rem;
@@ -943,13 +954,69 @@ html {
     }
 }
 
-.book-btn {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin-top: 1rem;
-    padding: 0.65rem;
+@media (max-width: 768px) {
+
+    /* Reduce global side padding */
+    .container {
+        padding: 0 12px;
+    }
+
+    /* Let service sections breathe full width */
+    .service-category-card {
+        max-width: 100%;
+        margin: 2rem 0 1rem;
+        padding: 1.25rem 1rem;
+        border: none;
+        /* remove boxed look */
+        background: transparent;
+        /* cleaner mobile feel */
+        box-shadow: none;
+        border-left: 3px solid var(--vibrant-purple);
+        padding-left: 1rem;
+    }
+
+    /* Expand service list fully */
+    .service-list {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    /* Make each service span wider */
+    .service-item {
+        padding: 1.25rem 0.5rem;
+        border: none;
+        box-shadow: none;
+    }
+
+    
+    .service-item {
+        grid-template-columns: 1fr;
+    }
+
+    .service-media img {
+        height: 160px;
+        width: 100%;
+    }
+
+    /* Improve readability */
+    .service-item p {
+        max-width: 100%;
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    /* Slightly tighter headers */
+    .service-header h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Optional: subtle divider instead of boxes */
+    .service-item:not(:last-child) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
 }
+
 
 .service-item:hover {
     box-shadow: none;
