@@ -746,7 +746,8 @@ html {
 }
 
 .service-list {
-    max-width: 1000px; /* or 720px if you want slightly tighter */
+    max-width: 1000px;
+    /* or 720px if you want slightly tighter */
     margin: 0 auto 5rem;
 }
 
@@ -988,7 +989,7 @@ html {
         box-shadow: none;
     }
 
-    
+
     .service-item {
         grid-template-columns: 1fr;
     }
@@ -1056,6 +1057,7 @@ html {
     background: var(--matte-black);
     aspect-ratio: 1;
     border: 2px solid var(--vibrant-purple);
+    border-radius: 12px;
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -1070,7 +1072,7 @@ html {
     color: var(--vibrant-purple-neon);
     font-size: 1.2rem;
     text-align: center;
-    padding: 2rem;
+    padding: 0rem;
 }
 
 .thumb {
@@ -1121,7 +1123,7 @@ html {
 
 /* GROUP LABEL */
 .group-label {
-    font-size: 0.7rem;
+    font-size: 1.0rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--vibrant-purple-neon);
@@ -1159,7 +1161,7 @@ html {
     }
 
     .group-label {
-        font-size: 0.65rem;
+        font-size: 0.80rem;
         letter-spacing: 0.16em;
     }
 
@@ -1202,8 +1204,26 @@ html {
 }
 
 .about-content img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+
+@media (max-width: 768px) {
+    .booking-hero {
+        overflow: hidden;
+    }
+
+    .about-content img {
+        width: 150%;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        margin-left: -25%;
+        border-radius: 12px;
+    }
 }
 
 /* Contact Section */
